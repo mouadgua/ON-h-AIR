@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap" rel="stylesheet">
     <style>
         body {
             font-family: 'Montserrat', sans-serif;
@@ -223,7 +223,8 @@
         }
         .lightbox-prev-btn { left: 10px; }
         .lightbox-next-btn { right: 10px; }
-            </style>
+        
+     </style>
     <script src="script.js"></script>
 </head>
 <body class="bg-white text-gray-700">
@@ -309,8 +310,8 @@
                 </div>
             </div>
             <!-- Slogan -->
-            <p class="text-white font-serif text-xl md:text-2xl mt-4 fade-in" style="transition-delay: 0.1s;">
-                &ldquo;vous avant tout&rdquo;
+            <p class="text-white font-serif italic text-3xl md:text-4xl mt-4 fade-in" style="transition-delay: 0.1s;color: #daa570;">
+                &ldquo; vous avant tout &rdquo;
             </p>
         </div>
     </div>
@@ -331,26 +332,28 @@
                     <a href="#booking-content" class="nav-link text-gray-700 hover:text-beige-600 hover:bg-beige-100 transition block py-2 px-3 text-center border border-beige-300 rounded-sm">Contact</a>
                 </div>
 
-                <!-- Desktop Call Button with Dropdown -->
-                <div class="hidden md:block relative">
-                    <button id="dropdown-call-btn" class="bg-black text-white hover:bg-gray-700 border-black px-6 py-3 rounded-sm font-medium transition flex items-center focus:outline-none">
-                        <i class="fas fa-phone mr-2"></i>
-                        <span>Appeler</span>
-                        <i class="fas fa-chevron-down ml-2 text-xs"></i>
-                    </button>
-                    <div id="call-dropdown-menu" class="absolute top-full right-0 mt-2 w-48 bg-white rounded-md shadow-lg py-1 hidden z-50">
-                        <a href="tel:+212669577172" class="block px-4 py-2 text-sm text-gray-700 hover:bg-beige-100 hover:text-beige-600">
-                            Nabil: +212669577172
-                        </a>
-                        <a href="tel:+212678915564" class="block px-4 py-2 text-sm text-gray-700 hover:bg-beige-100 hover:text-beige-600">
-                            Fahd: +212678915564
-                        </a>
-                    </a>
+                <!-- Conteneur pour les boutons à droite (Appeler et Langue) -->
+                <div class="hidden md:flex md:items-center">
+                    <!-- Desktop Call Button with Dropdown -->
+                    <div class="relative">
+                        <button id="dropdown-call-btn" class="bg-black text-white hover:bg-gray-700 border-black px-6 py-3 rounded-sm font-medium transition flex items-center focus:outline-none">
+                            <i class="fas fa-phone mr-2"></i>
+                            <span>Appeler</span>
+                            <i class="fas fa-chevron-down ml-2 text-xs"></i>
+                        </button>
+                        <div id="call-dropdown-menu" class="absolute top-full right-0 mt-2 w-48 bg-white rounded-md shadow-lg py-1 hidden z-50">
+                            <a href="tel:+212669577172" class="block px-4 py-2 text-sm text-gray-700 hover:bg-beige-100 hover:text-beige-600">
+                                Nabil: +212669577172
+                            </a>
+                            <a href="tel:+212678915564" class="block px-4 py-2 text-sm text-gray-700 hover:bg-beige-100 hover:text-beige-600">
+                                Fahd: +212678915564
+                            </a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </nav>
-
     <!-- Main Content Wrapper for SPA-like behavior -->
     <main id="page-content-wrapper">
 
@@ -755,6 +758,12 @@
                             <img src="./images/partenaires/par13.png" alt="Partner Logo 3" class="h-32 md:h-40 mx-4 md:mx-6 filter grayscale hover:grayscale-0 transition-all duration-300">
                             <img src="./images/partenaires/par14.png" alt="Partner Logo 4" class="h-32 md:h-40 mx-4 md:mx-6 filter grayscale hover:grayscale-0 transition-all duration-300">
                             <img src="./images/partenaires/par15.png" alt="Partner Logo 5" class="h-32 md:h-40 mx-4 md:mx-6 filter grayscale hover:grayscale-0 transition-all duration-300">
+                            <img src="./images/partenaires/par16.png" alt="Partner Logo 5" class="h-32 md:h-40 mx-4 md:mx-6 filter grayscale hover:grayscale-0 transition-all duration-300">
+                            <img src="./images/partenaires/par17.png" alt="Partner Logo 5" class="h-32 md:h-40 mx-4 md:mx-6 filter grayscale hover:grayscale-0 transition-all duration-300">
+                            <img src="./images/partenaires/par18.png" alt="Partner Logo 5" class="h-32 md:h-40 mx-4 md:mx-6 filter grayscale hover:grayscale-0 transition-all duration-300">
+                            <img src="./images/partenaires/par19.png" alt="Partner Logo 5" class="h-32 md:h-40 mx-4 md:mx-6 filter grayscale hover:grayscale-0 transition-all duration-300">
+                            <img src="./images/partenaires/par20.png" alt="Partner Logo 5" class="h-32 md:h-40 mx-4 md:mx-6 filter grayscale hover:grayscale-0 transition-all duration-300">
+                            <img src="./images/partenaires/par21.png" alt="Partner Logo 5" class="h-32 md:h-40 mx-4 md:mx-6 filter grayscale hover:grayscale-0 transition-all duration-300">
                         </div>
                     </div>
                 </div>
@@ -2099,6 +2108,39 @@
                 });
             });
         }
+
+        // Desktop Language Switcher Dropdown Toggle
+        const dropdownLangBtn = document.getElementById('dropdown-lang-btn');
+        const langDropdownMenu = document.getElementById('lang-dropdown-menu');
+        const currentLangText = document.getElementById('current-lang-text');
+        // const langOptions = document.querySelectorAll('.lang-option'); // Déjà défini si besoin de JS pour changer le texte dynamiquement
+
+        if (dropdownLangBtn && langDropdownMenu && currentLangText) {
+            dropdownLangBtn.addEventListener('click', function(event) {
+                event.stopPropagation(); // Empêche la fermeture immédiate par le listener sur document
+                langDropdownMenu.classList.toggle('hidden');
+            });
+
+            // Ferme le dropdown si l'utilisateur clique en dehors
+            document.addEventListener('click', function(event) {
+                if (!dropdownLangBtn.contains(event.target) && !langDropdownMenu.contains(event.target)) {
+                    langDropdownMenu.classList.add('hidden');
+                }
+            });
+
+            // Initialise le texte du bouton basé sur le paramètre d'URL `lang` ou la langue par défaut
+            // Les liens href="?lang=xx" rechargeront la page, donc le serveur devrait servir la bonne langue.
+            // Ce JS met à jour le texte du bouton pour refléter l'état actuel après chargement.
+            const urlParams = new URLSearchParams(window.location.search);
+            const currentUrlLang = urlParams.get('lang');
+
+            if (currentUrlLang === 'en') {
+                currentLangText.textContent = 'English';
+            } else {
+                currentLangText.textContent = 'Français'; // Par défaut ou si lang=fr ou si aucun param lang
+            }
+        }
+
 
         // Image Lightbox Functionality
         const imageLightboxModal = document.getElementById('image-lightbox-modal');
