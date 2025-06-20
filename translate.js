@@ -16,7 +16,7 @@ const translations = {
         "aboutTitle": "About <span class=\"text-beige-600\">Our Salon</span>",
         "aboutIntro": "Discover our passion for beauty and excellence, in a space dedicated to your well-being.",
         "aboutCommitmentTitle": "Our Commitment to You",
-        "aboutCommitmentText": "At ON h'AIR salon, we believe everyone deserves to feel beautiful and confident. Our mission is to offer you the highest quality services in a warm and luxurious environment. We use top-choice products and innovative techniques to reveal your natural radiance. Ensured by a professional and meticulous process.",
+        "aboutCommitmentText": "At ON h’AIR Salon, we believe every woman deserves to feel effortlessly beautiful and confidently herself. Our mission is to deliver exceptional service in a warm, luxurious setting—where innovation meets elegance. With premium products and cutting-edge techniques, we unveil your natural radiance through a meticulous and artful approach",
         "aboutFeature1Title": "Luxurious Atmosphere",
         "aboutFeature1Text": "Immerse yourself in an elegant and soothing setting, designed by us for your absolute relaxation.",
         "aboutFeature2Title": "Personalized Approach",
