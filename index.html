@@ -173,10 +173,9 @@
             0% { transform: translateX(0%); }
             100% { transform: translateX(-50%); }
         }
-        .partner-logos-outer-container:hover .animate-scroll-logos {
+        #partner-logos .relative:hover .animate-scroll-logos {
             animation-play-state: paused;
         }
-
         /* Gallery Preview Carousel */
         .animate-scroll-gallery-preview {
             animation: scroll-gallery-preview-kf 30s linear infinite; /* Slower scroll for larger images */
@@ -184,6 +183,23 @@
         @keyframes scroll-gallery-preview-kf {
             0% { transform: translateX(0%); }
             100% { transform: translateX(-50%); }
+        }
+        /* Utility to hide scrollbar */
+        .scrollbar-hide::-webkit-scrollbar {
+            display: none;
+        }
+        .scrollbar-hide {
+            -ms-overflow-style: none;  /* IE and Edge */
+            scrollbar-width: none;  /* Firefox */
+        }
+
+        /* Ensure arrows are clickable and have a decent size */
+        #partner-scroll-left, #partner-scroll-right {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            
         }
         .gallery-preview-carousel-outer-container:hover .animate-scroll-gallery-preview {
             animation-play-state: paused;
@@ -234,6 +250,9 @@
     <div class="promotion-bar">
         <div class="promotion-text-wrapper" data-translate="promoOffer">
             <!-- Add your promotional messages here. Duplicate for seamless scroll -->
+            <span>🎉 Offre Spéciale: -10% sur votre première visite! ✨ Réservez dès maintenant! </span>
+            <span>🎉 Offre Spéciale: -10% sur votre première visite! ✨ Réservez dès maintenant! </span>
+            <span>🎉 Offre Spéciale: -10% sur votre première visite! ✨ Réservez dès maintenant! </span>
             <span>🎉 Offre Spéciale: -10% sur votre première visite! ✨ Réservez dès maintenant! </span>
             <span>🎉 Offre Spéciale: -10% sur votre première visite! ✨ Réservez dès maintenant! </span>
         </div>
@@ -753,7 +772,7 @@
 
         <!-- Partner Logos Section -->
         <section id="partner-logos" class="py-115 bg-white fade-in">
-            <div class="container mx-auto px-12">
+            <div class="container mx-auto px-4 sm:px-6 md:px-12">
                 <div class="text-center mb-12">
                     <h2 class="font-serif text-3xl md:text-4xl font-bold text-gray-800 mb-4" data-translate="partnersTitle">
                         Nos <span class="text-beige-600">Partenaires</span> de Confiance
@@ -762,34 +781,215 @@
                         Nous collaborons avec les meilleures marques pour vous garantir des soins d'exception.
                     </p>
                 </div>
-                <div class="partner-logos-outer-container overflow-hidden w-full py-4">
-                    <div class="partner-logos-inner-container whitespace-nowrap">
-                        <div class="partner-logo-set inline-flex animate-scroll-logos items-center">
-                            <img src="./images/partenaires/par1.png" alt="Partner Logo 1" class="h-40 md:h-40 mx-4 md:mx-6 filter grayscale hover:grayscale-0 transition-all duration-300">
-                            <img src="./images/partenaires/par2.png" alt="Partner Logo 2" class="h-40 md:h-40 mx-4 md:mx-6 filter grayscale hover:grayscale-0 transition-all duration-300">
-                            <img src="./images/partenaires/par3.png" alt="Partner Logo 3" class="h-40 md:h-40 mx-4 md:mx-6 filter grayscale hover:grayscale-0 transition-all duration-300">
-                            <img src="./images/partenaires/par4.png" alt="Partner Logo 4" class="h-40 md:h-40 mx-4 md:mx-6 filter grayscale hover:grayscale-0 transition-all duration-300">
-                            <img src="./images/partenaires/par5.png" alt="Partner Logo 5" class="h-40 md:h-40 mx-4 md:mx-6 filter grayscale hover:grayscale-0 transition-all duration-300">
-                            <!-- Duplicate Set -->
-                            <img src="./images/partenaires/par6.png" alt="Partner Logo 1" class="h-40 md:h-40 mx-4 md:mx-6 filter grayscale hover:grayscale-0 transition-all duration-300">
-                            <img src="./images/partenaires/par7.png" alt="Partner Logo 2" class="h-40 md:h-40 mx-4 md:mx-6 filter grayscale hover:grayscale-0 transition-all duration-300">
-                            <img src="./images/partenaires/par8.png" alt="Partner Logo 3" class="h-40 md:h-40 mx-4 md:mx-6 filter grayscale hover:grayscale-0 transition-all duration-300">
-                            <img src="./images/partenaires/par9.png" alt="Partner Logo 4" class="h-40 md:h-40 mx-4 md:mx-6 filter grayscale hover:grayscale-0 transition-all duration-300">
-                            <img src="./images/partenaires/par10.png" alt="Partner Logo 5" class="h-40 md:h-40 mx-4 md:mx-6 filter grayscale hover:grayscale-0 transition-all duration-300">
-                            <img src="./images/partenaires/par11.png" alt="Partner Logo 1" class="h-40 md:h-40 mx-4 md:mx-6 filter grayscale hover:grayscale-0 transition-all duration-300">
-                            <img src="./images/partenaires/par12.png" alt="Partner Logo 2" class="h-40 md:h-40 mx-4 md:mx-6 filter grayscale hover:grayscale-0 transition-all duration-300">
-                            <img src="./images/partenaires/par13.png" alt="Partner Logo 3" class="h-40 md:h-40 mx-4 md:mx-6 filter grayscale hover:grayscale-0 transition-all duration-300">
-                            <img src="./images/partenaires/par14.png" alt="Partner Logo 4" class="h-40 md:h-40 mx-4 md:mx-6 filter grayscale hover:grayscale-0 transition-all duration-300">
-                            <img src="./images/partenaires/par15.png" alt="Partner Logo 5" class="h-40 md:h-40 mx-4 md:mx-6 filter grayscale hover:grayscale-0 transition-all duration-300">
-                            <img src="./images/partenaires/par16.png" alt="Partner Logo 5" class="h-40 md:h-40 mx-4 md:mx-6 filter grayscale hover:grayscale-0 transition-all duration-300">
-                            <img src="./images/partenaires/par17.png" alt="Partner Logo 5" class="h-40 md:h-40 mx-4 md:mx-6 filter grayscale hover:grayscale-0 transition-all duration-300">
-                            <img src="./images/partenaires/par18.png" alt="Partner Logo 5" class="h-40 md:h-40 mx-4 md:mx-6 filter grayscale hover:grayscale-0 transition-all duration-300">
-                            <img src="./images/partenaires/par19.png" alt="Partner Logo 5" class="h-40 md:h-40 mx-4 md:mx-6 filter grayscale hover:grayscale-0 transition-all duration-300">
-                            <img src="./images/partenaires/par20.png" alt="Partner Logo 5" class="h-40 md:h-40 mx-4 md:mx-6 filter grayscale hover:grayscale-0 transition-all duration-300">
-                            <img src="./images/partenaires/par21.png" alt="Partner Logo 5" class="h-40 md:h-40 mx-4 md:mx-6 filter grayscale hover:grayscale-0 transition-all duration-300">
+                <!-- Wrapper for arrows and carousel -->
+                <div class="relative">
+                    <div class="partner-logos-outer-container overflow-x-auto w-full py-4 scrollbar-hide">
+                        <div class="partner-logos-inner-container whitespace-nowrap">
+                            <div class="partner-logo-set inline-flex animate-scroll-logos items-center">
+                                <img src="./images/partenaires/par1.png" alt="Partner Logo 1" class="h-44 md:h-40 mx-4 md:mx-6 filter grayscale hover:grayscale-0 transition-all duration-300">
+                                <img src="./images/partenaires/par2.png" alt="Partner Logo 2" class="h-44 md:h-40 mx-4 md:mx-6 filter grayscale hover:grayscale-0 transition-all duration-300">
+                                <img src="./images/partenaires/par3.png" alt="Partner Logo 3" class="h-44 md:h-40 mx-4 md:mx-6 filter grayscale hover:grayscale-0 transition-all duration-300">
+                                <img src="./images/partenaires/par4.png" alt="Partner Logo 4" class="h-44 md:h-40 mx-4 md:mx-6 filter grayscale hover:grayscale-0 transition-all duration-300">
+                                <img src="./images/partenaires/par5.png" alt="Partner Logo 5" class="h-44 md:h-40 mx-4 md:mx-6 filter grayscale hover:grayscale-0 transition-all duration-300">
+                                <!-- Duplicate Set -->
+                                <img src="./images/partenaires/par6.png" alt="Partner Logo 6" class="h-44 md:h-40 mx-4 md:mx-6 filter grayscale hover:grayscale-0 transition-all duration-300">
+                                <img src="./images/partenaires/par7.png" alt="Partner Logo 7" class="h-44 md:h-40 mx-4 md:mx-6 filter grayscale hover:grayscale-0 transition-all duration-300">
+                                <img src="./images/partenaires/par8.png" alt="Partner Logo 8" class="h-44 md:h-40 mx-4 md:mx-6 filter grayscale hover:grayscale-0 transition-all duration-300">
+                                <img src="./images/partenaires/par9.png" alt="Partner Logo 9" class="h-44 md:h-40 mx-4 md:mx-6 filter grayscale hover:grayscale-0 transition-all duration-300">
+                                <img src="./images/partenaires/par10.png" alt="Partner Logo 10" class="h-44 md:h-40 mx-4 md:mx-6 filter grayscale hover:grayscale-0 transition-all duration-300">
+                                <img src="./images/partenaires/par11.png" alt="Partner Logo 11" class="h-44 md:h-40 mx-4 md:mx-6 filter grayscale hover:grayscale-0 transition-all duration-300">
+                                <img src="./images/partenaires/par12.png" alt="Partner Logo 12" class="h-44 md:h-40 mx-4 md:mx-6 filter grayscale hover:grayscale-0 transition-all duration-300">
+                                <img src="./images/partenaires/par13.png" alt="Partner Logo 13" class="h-44 md:h-40 mx-4 md:mx-6 filter grayscale hover:grayscale-0 transition-all duration-300">
+                                <img src="./images/partenaires/par14.png" alt="Partner Logo 14" class="h-44 md:h-40 mx-4 md:mx-6 filter grayscale hover:grayscale-0 transition-all duration-300">
+                                <img src="./images/partenaires/par15.png" alt="Partner Logo 15" class="h-44 md:h-40 mx-4 md:mx-6 filter grayscale hover:grayscale-0 transition-all duration-300">
+                                <img src="./images/partenaires/par16.png" alt="Partner Logo 16" class="h-44 md:h-40 mx-4 md:mx-6 filter grayscale hover:grayscale-0 transition-all duration-300">
+                                <img src="./images/partenaires/par17.png" alt="Partner Logo 17" class="h-44 md:h-40 mx-4 md:mx-6 filter grayscale hover:grayscale-0 transition-all duration-300">
+                                <img src="./images/partenaires/par18.png" alt="Partner Logo 18" class="h-44 md:h-40 mx-4 md:mx-6 filter grayscale hover:grayscale-0 transition-all duration-300">
+                                <img src="./images/partenaires/par19.png" alt="Partner Logo 19" class="h-44 md:h-40 mx-4 md:mx-6 filter grayscale hover:grayscale-0 transition-all duration-300">
+                                <img src="./images/partenaires/par20.png" alt="Partner Logo 20" class="h-44 md:h-40 mx-4 md:mx-6 filter grayscale hover:grayscale-0 transition-all duration-300">
+                                <img src="./images/partenaires/par21.png" alt="Partner Logo 21" class="h-44 md:h-40 mx-4 md:mx-6 filter grayscale hover:grayscale-0 transition-all duration-300">
+                                <!-- duplicate set -->
+                                 <img src="./images/partenaires/par6.png" alt="Partner Logo 6" class="h-44 md:h-40 mx-4 md:mx-6 filter grayscale hover:grayscale-0 transition-all duration-300">
+                                <img src="./images/partenaires/par7.png" alt="Partner Logo 7" class="h-44 md:h-40 mx-4 md:mx-6 filter grayscale hover:grayscale-0 transition-all duration-300">
+                                <img src="./images/partenaires/par8.png" alt="Partner Logo 8" class="h-44 md:h-40 mx-4 md:mx-6 filter grayscale hover:grayscale-0 transition-all duration-300">
+                                <img src="./images/partenaires/par9.png" alt="Partner Logo 9" class="h-44 md:h-40 mx-4 md:mx-6 filter grayscale hover:grayscale-0 transition-all duration-300">
+                                <img src="./images/partenaires/par10.png" alt="Partner Logo 10" class="h-44 md:h-40 mx-4 md:mx-6 filter grayscale hover:grayscale-0 transition-all duration-300">
+                                <img src="./images/partenaires/par11.png" alt="Partner Logo 11" class="h-44 md:h-40 mx-4 md:mx-6 filter grayscale hover:grayscale-0 transition-all duration-300">
+                                <img src="./images/partenaires/par12.png" alt="Partner Logo 12" class="h-44 md:h-40 mx-4 md:mx-6 filter grayscale hover:grayscale-0 transition-all duration-300">
+                                <img src="./images/partenaires/par13.png" alt="Partner Logo 13" class="h-44 md:h-40 mx-4 md:mx-6 filter grayscale hover:grayscale-0 transition-all duration-300">
+                                <img src="./images/partenaires/par14.png" alt="Partner Logo 14" class="h-44 md:h-40 mx-4 md:mx-6 filter grayscale hover:grayscale-0 transition-all duration-300">
+                                <img src="./images/partenaires/par15.png" alt="Partner Logo 15" class="h-44 md:h-40 mx-4 md:mx-6 filter grayscale hover:grayscale-0 transition-all duration-300">
+                                <img src="./images/partenaires/par16.png" alt="Partner Logo 16" class="h-44 md:h-40 mx-4 md:mx-6 filter grayscale hover:grayscale-0 transition-all duration-300">
+                                <img src="./images/partenaires/par17.png" alt="Partner Logo 17" class="h-44 md:h-40 mx-4 md:mx-6 filter grayscale hover:grayscale-0 transition-all duration-300">
+                                <img src="./images/partenaires/par18.png" alt="Partner Logo 18" class="h-44 md:h-40 mx-4 md:mx-6 filter grayscale hover:grayscale-0 transition-all duration-300">
+                                <img src="./images/partenaires/par19.png" alt="Partner Logo 19" class="h-44 md:h-40 mx-4 md:mx-6 filter grayscale hover:grayscale-0 transition-all duration-300">
+                                <img src="./images/partenaires/par20.png" alt="Partner Logo 20" class="h-44 md:h-40 mx-4 md:mx-6 filter grayscale hover:grayscale-0 transition-all duration-300">
+                                <img src="./images/partenaires/par21.png" alt="Partner Logo 21" class="h-44 md:h-40 mx-4 md:mx-6 filter grayscale hover:grayscale-0 transition-all duration-300">
+                                <!-- duplicate set -->
+                                 <img src="./images/partenaires/par6.png" alt="Partner Logo 6" class="h-44 md:h-40 mx-4 md:mx-6 filter grayscale hover:grayscale-0 transition-all duration-300">
+                                <img src="./images/partenaires/par7.png" alt="Partner Logo 7" class="h-44 md:h-40 mx-4 md:mx-6 filter grayscale hover:grayscale-0 transition-all duration-300">
+                                <img src="./images/partenaires/par8.png" alt="Partner Logo 8" class="h-44 md:h-40 mx-4 md:mx-6 filter grayscale hover:grayscale-0 transition-all duration-300">
+                                <img src="./images/partenaires/par9.png" alt="Partner Logo 9" class="h-44 md:h-40 mx-4 md:mx-6 filter grayscale hover:grayscale-0 transition-all duration-300">
+                                <img src="./images/partenaires/par10.png" alt="Partner Logo 10" class="h-44 md:h-40 mx-4 md:mx-6 filter grayscale hover:grayscale-0 transition-all duration-300">
+                                <img src="./images/partenaires/par11.png" alt="Partner Logo 11" class="h-44 md:h-40 mx-4 md:mx-6 filter grayscale hover:grayscale-0 transition-all duration-300">
+                                <img src="./images/partenaires/par12.png" alt="Partner Logo 12" class="h-44 md:h-40 mx-4 md:mx-6 filter grayscale hover:grayscale-0 transition-all duration-300">
+                                <img src="./images/partenaires/par13.png" alt="Partner Logo 13" class="h-44 md:h-40 mx-4 md:mx-6 filter grayscale hover:grayscale-0 transition-all duration-300">
+                                <img src="./images/partenaires/par14.png" alt="Partner Logo 14" class="h-44 md:h-40 mx-4 md:mx-6 filter grayscale hover:grayscale-0 transition-all duration-300">
+                                <img src="./images/partenaires/par15.png" alt="Partner Logo 15" class="h-44 md:h-40 mx-4 md:mx-6 filter grayscale hover:grayscale-0 transition-all duration-300">
+                                <img src="./images/partenaires/par16.png" alt="Partner Logo 16" class="h-44 md:h-40 mx-4 md:mx-6 filter grayscale hover:grayscale-0 transition-all duration-300">
+                                <img src="./images/partenaires/par17.png" alt="Partner Logo 17" class="h-44 md:h-40 mx-4 md:mx-6 filter grayscale hover:grayscale-0 transition-all duration-300">
+                                <img src="./images/partenaires/par18.png" alt="Partner Logo 18" class="h-44 md:h-40 mx-4 md:mx-6 filter grayscale hover:grayscale-0 transition-all duration-300">
+                                <img src="./images/partenaires/par19.png" alt="Partner Logo 19" class="h-44 md:h-40 mx-4 md:mx-6 filter grayscale hover:grayscale-0 transition-all duration-300">
+                                <img src="./images/partenaires/par20.png" alt="Partner Logo 20" class="h-44 md:h-40 mx-4 md:mx-6 filter grayscale hover:grayscale-0 transition-all duration-300">
+                                <img src="./images/partenaires/par21.png" alt="Partner Logo 21" class="h-44 md:h-40 mx-4 md:mx-6 filter grayscale hover:grayscale-0 transition-all duration-300">
+                                <!-- duplicate set -->
+                                 <img src="./images/partenaires/par6.png" alt="Partner Logo 6" class="h-44 md:h-40 mx-4 md:mx-6 filter grayscale hover:grayscale-0 transition-all duration-300">
+                                <img src="./images/partenaires/par7.png" alt="Partner Logo 7" class="h-44 md:h-40 mx-4 md:mx-6 filter grayscale hover:grayscale-0 transition-all duration-300">
+                                <img src="./images/partenaires/par8.png" alt="Partner Logo 8" class="h-44 md:h-40 mx-4 md:mx-6 filter grayscale hover:grayscale-0 transition-all duration-300">
+                                <img src="./images/partenaires/par9.png" alt="Partner Logo 9" class="h-44 md:h-40 mx-4 md:mx-6 filter grayscale hover:grayscale-0 transition-all duration-300">
+                                <img src="./images/partenaires/par10.png" alt="Partner Logo 10" class="h-44 md:h-40 mx-4 md:mx-6 filter grayscale hover:grayscale-0 transition-all duration-300">
+                                <img src="./images/partenaires/par11.png" alt="Partner Logo 11" class="h-44 md:h-40 mx-4 md:mx-6 filter grayscale hover:grayscale-0 transition-all duration-300">
+                                <img src="./images/partenaires/par12.png" alt="Partner Logo 12" class="h-44 md:h-40 mx-4 md:mx-6 filter grayscale hover:grayscale-0 transition-all duration-300">
+                                <img src="./images/partenaires/par13.png" alt="Partner Logo 13" class="h-44 md:h-40 mx-4 md:mx-6 filter grayscale hover:grayscale-0 transition-all duration-300">
+                                <img src="./images/partenaires/par14.png" alt="Partner Logo 14" class="h-44 md:h-40 mx-4 md:mx-6 filter grayscale hover:grayscale-0 transition-all duration-300">
+                                <img src="./images/partenaires/par15.png" alt="Partner Logo 15" class="h-44 md:h-40 mx-4 md:mx-6 filter grayscale hover:grayscale-0 transition-all duration-300">
+                                <img src="./images/partenaires/par16.png" alt="Partner Logo 16" class="h-44 md:h-40 mx-4 md:mx-6 filter grayscale hover:grayscale-0 transition-all duration-300">
+                                <img src="./images/partenaires/par17.png" alt="Partner Logo 17" class="h-44 md:h-40 mx-4 md:mx-6 filter grayscale hover:grayscale-0 transition-all duration-300">
+                                <img src="./images/partenaires/par18.png" alt="Partner Logo 18" class="h-44 md:h-40 mx-4 md:mx-6 filter grayscale hover:grayscale-0 transition-all duration-300">
+                                <img src="./images/partenaires/par19.png" alt="Partner Logo 19" class="h-44 md:h-40 mx-4 md:mx-6 filter grayscale hover:grayscale-0 transition-all duration-300">
+                                <img src="./images/partenaires/par20.png" alt="Partner Logo 20" class="h-44 md:h-40 mx-4 md:mx-6 filter grayscale hover:grayscale-0 transition-all duration-300">
+                                <img src="./images/partenaires/par21.png" alt="Partner Logo 21" class="h-44 md:h-40 mx-4 md:mx-6 filter grayscale hover:grayscale-0 transition-all duration-300">
+                                <!-- duplicate set -->
+                                 <img src="./images/partenaires/par6.png" alt="Partner Logo 6" class="h-44 md:h-40 mx-4 md:mx-6 filter grayscale hover:grayscale-0 transition-all duration-300">
+                                <img src="./images/partenaires/par7.png" alt="Partner Logo 7" class="h-44 md:h-40 mx-4 md:mx-6 filter grayscale hover:grayscale-0 transition-all duration-300">
+                                <img src="./images/partenaires/par8.png" alt="Partner Logo 8" class="h-44 md:h-40 mx-4 md:mx-6 filter grayscale hover:grayscale-0 transition-all duration-300">
+                                <img src="./images/partenaires/par9.png" alt="Partner Logo 9" class="h-44 md:h-40 mx-4 md:mx-6 filter grayscale hover:grayscale-0 transition-all duration-300">
+                                <img src="./images/partenaires/par10.png" alt="Partner Logo 10" class="h-44 md:h-40 mx-4 md:mx-6 filter grayscale hover:grayscale-0 transition-all duration-300">
+                                <img src="./images/partenaires/par11.png" alt="Partner Logo 11" class="h-44 md:h-40 mx-4 md:mx-6 filter grayscale hover:grayscale-0 transition-all duration-300">
+                                <img src="./images/partenaires/par12.png" alt="Partner Logo 12" class="h-44 md:h-40 mx-4 md:mx-6 filter grayscale hover:grayscale-0 transition-all duration-300">
+                                <img src="./images/partenaires/par13.png" alt="Partner Logo 13" class="h-44 md:h-40 mx-4 md:mx-6 filter grayscale hover:grayscale-0 transition-all duration-300">
+                                <img src="./images/partenaires/par14.png" alt="Partner Logo 14" class="h-44 md:h-40 mx-4 md:mx-6 filter grayscale hover:grayscale-0 transition-all duration-300">
+                                <img src="./images/partenaires/par15.png" alt="Partner Logo 15" class="h-44 md:h-40 mx-4 md:mx-6 filter grayscale hover:grayscale-0 transition-all duration-300">
+                                <img src="./images/partenaires/par16.png" alt="Partner Logo 16" class="h-44 md:h-40 mx-4 md:mx-6 filter grayscale hover:grayscale-0 transition-all duration-300">
+                                <img src="./images/partenaires/par17.png" alt="Partner Logo 17" class="h-44 md:h-40 mx-4 md:mx-6 filter grayscale hover:grayscale-0 transition-all duration-300">
+                                <img src="./images/partenaires/par18.png" alt="Partner Logo 18" class="h-44 md:h-40 mx-4 md:mx-6 filter grayscale hover:grayscale-0 transition-all duration-300">
+                                <img src="./images/partenaires/par19.png" alt="Partner Logo 19" class="h-44 md:h-40 mx-4 md:mx-6 filter grayscale hover:grayscale-0 transition-all duration-300">
+                                <img src="./images/partenaires/par20.png" alt="Partner Logo 20" class="h-44 md:h-40 mx-4 md:mx-6 filter grayscale hover:grayscale-0 transition-all duration-300">
+                                <img src="./images/partenaires/par21.png" alt="Partner Logo 21" class="h-44 md:h-40 mx-4 md:mx-6 filter grayscale hover:grayscale-0 transition-all duration-300">
+                                <!-- duplicate set -->
+                                 <img src="./images/partenaires/par6.png" alt="Partner Logo 6" class="h-44 md:h-40 mx-4 md:mx-6 filter grayscale hover:grayscale-0 transition-all duration-300">
+                                <img src="./images/partenaires/par7.png" alt="Partner Logo 7" class="h-44 md:h-40 mx-4 md:mx-6 filter grayscale hover:grayscale-0 transition-all duration-300">
+                                <img src="./images/partenaires/par8.png" alt="Partner Logo 8" class="h-44 md:h-40 mx-4 md:mx-6 filter grayscale hover:grayscale-0 transition-all duration-300">
+                                <img src="./images/partenaires/par9.png" alt="Partner Logo 9" class="h-44 md:h-40 mx-4 md:mx-6 filter grayscale hover:grayscale-0 transition-all duration-300">
+                                <img src="./images/partenaires/par10.png" alt="Partner Logo 10" class="h-44 md:h-40 mx-4 md:mx-6 filter grayscale hover:grayscale-0 transition-all duration-300">
+                                <img src="./images/partenaires/par11.png" alt="Partner Logo 11" class="h-44 md:h-40 mx-4 md:mx-6 filter grayscale hover:grayscale-0 transition-all duration-300">
+                                <img src="./images/partenaires/par12.png" alt="Partner Logo 12" class="h-44 md:h-40 mx-4 md:mx-6 filter grayscale hover:grayscale-0 transition-all duration-300">
+                                <img src="./images/partenaires/par13.png" alt="Partner Logo 13" class="h-44 md:h-40 mx-4 md:mx-6 filter grayscale hover:grayscale-0 transition-all duration-300">
+                                <img src="./images/partenaires/par14.png" alt="Partner Logo 14" class="h-44 md:h-40 mx-4 md:mx-6 filter grayscale hover:grayscale-0 transition-all duration-300">
+                                <img src="./images/partenaires/par15.png" alt="Partner Logo 15" class="h-44 md:h-40 mx-4 md:mx-6 filter grayscale hover:grayscale-0 transition-all duration-300">
+                                <img src="./images/partenaires/par16.png" alt="Partner Logo 16" class="h-44 md:h-40 mx-4 md:mx-6 filter grayscale hover:grayscale-0 transition-all duration-300">
+                                <img src="./images/partenaires/par17.png" alt="Partner Logo 17" class="h-44 md:h-40 mx-4 md:mx-6 filter grayscale hover:grayscale-0 transition-all duration-300">
+                                <img src="./images/partenaires/par18.png" alt="Partner Logo 18" class="h-44 md:h-40 mx-4 md:mx-6 filter grayscale hover:grayscale-0 transition-all duration-300">
+                                <img src="./images/partenaires/par19.png" alt="Partner Logo 19" class="h-44 md:h-40 mx-4 md:mx-6 filter grayscale hover:grayscale-0 transition-all duration-300">
+                                <img src="./images/partenaires/par20.png" alt="Partner Logo 20" class="h-44 md:h-40 mx-4 md:mx-6 filter grayscale hover:grayscale-0 transition-all duration-300">
+                                <img src="./images/partenaires/par21.png" alt="Partner Logo 21" class="h-44 md:h-40 mx-4 md:mx-6 filter grayscale hover:grayscale-0 transition-all duration-300">
+                                <!-- duplicate set -->
+                                 <img src="./images/partenaires/par6.png" alt="Partner Logo 6" class="h-44 md:h-40 mx-4 md:mx-6 filter grayscale hover:grayscale-0 transition-all duration-300">
+                                <img src="./images/partenaires/par7.png" alt="Partner Logo 7" class="h-44 md:h-40 mx-4 md:mx-6 filter grayscale hover:grayscale-0 transition-all duration-300">
+                                <img src="./images/partenaires/par8.png" alt="Partner Logo 8" class="h-44 md:h-40 mx-4 md:mx-6 filter grayscale hover:grayscale-0 transition-all duration-300">
+                                <img src="./images/partenaires/par9.png" alt="Partner Logo 9" class="h-44 md:h-40 mx-4 md:mx-6 filter grayscale hover:grayscale-0 transition-all duration-300">
+                                <img src="./images/partenaires/par10.png" alt="Partner Logo 10" class="h-44 md:h-40 mx-4 md:mx-6 filter grayscale hover:grayscale-0 transition-all duration-300">
+                                <img src="./images/partenaires/par11.png" alt="Partner Logo 11" class="h-44 md:h-40 mx-4 md:mx-6 filter grayscale hover:grayscale-0 transition-all duration-300">
+                                <img src="./images/partenaires/par12.png" alt="Partner Logo 12" class="h-44 md:h-40 mx-4 md:mx-6 filter grayscale hover:grayscale-0 transition-all duration-300">
+                                <img src="./images/partenaires/par13.png" alt="Partner Logo 13" class="h-44 md:h-40 mx-4 md:mx-6 filter grayscale hover:grayscale-0 transition-all duration-300">
+                                <img src="./images/partenaires/par14.png" alt="Partner Logo 14" class="h-44 md:h-40 mx-4 md:mx-6 filter grayscale hover:grayscale-0 transition-all duration-300">
+                                <img src="./images/partenaires/par15.png" alt="Partner Logo 15" class="h-44 md:h-40 mx-4 md:mx-6 filter grayscale hover:grayscale-0 transition-all duration-300">
+                                <img src="./images/partenaires/par16.png" alt="Partner Logo 16" class="h-44 md:h-40 mx-4 md:mx-6 filter grayscale hover:grayscale-0 transition-all duration-300">
+                                <img src="./images/partenaires/par17.png" alt="Partner Logo 17" class="h-44 md:h-40 mx-4 md:mx-6 filter grayscale hover:grayscale-0 transition-all duration-300">
+                                <img src="./images/partenaires/par18.png" alt="Partner Logo 18" class="h-44 md:h-40 mx-4 md:mx-6 filter grayscale hover:grayscale-0 transition-all duration-300">
+                                <img src="./images/partenaires/par19.png" alt="Partner Logo 19" class="h-44 md:h-40 mx-4 md:mx-6 filter grayscale hover:grayscale-0 transition-all duration-300">
+                                <img src="./images/partenaires/par20.png" alt="Partner Logo 20" class="h-44 md:h-40 mx-4 md:mx-6 filter grayscale hover:grayscale-0 transition-all duration-300">
+                                <img src="./images/partenaires/par21.png" alt="Partner Logo 21" class="h-44 md:h-40 mx-4 md:mx-6 filter grayscale hover:grayscale-0 transition-all duration-300">
+                                <!-- duplicate set -->
+                                 <img src="./images/partenaires/par6.png" alt="Partner Logo 6" class="h-44 md:h-40 mx-4 md:mx-6 filter grayscale hover:grayscale-0 transition-all duration-300">
+                                <img src="./images/partenaires/par7.png" alt="Partner Logo 7" class="h-44 md:h-40 mx-4 md:mx-6 filter grayscale hover:grayscale-0 transition-all duration-300">
+                                <img src="./images/partenaires/par8.png" alt="Partner Logo 8" class="h-44 md:h-40 mx-4 md:mx-6 filter grayscale hover:grayscale-0 transition-all duration-300">
+                                <img src="./images/partenaires/par9.png" alt="Partner Logo 9" class="h-44 md:h-40 mx-4 md:mx-6 filter grayscale hover:grayscale-0 transition-all duration-300">
+                                <img src="./images/partenaires/par10.png" alt="Partner Logo 10" class="h-44 md:h-40 mx-4 md:mx-6 filter grayscale hover:grayscale-0 transition-all duration-300">
+                                <img src="./images/partenaires/par11.png" alt="Partner Logo 11" class="h-44 md:h-40 mx-4 md:mx-6 filter grayscale hover:grayscale-0 transition-all duration-300">
+                                <img src="./images/partenaires/par12.png" alt="Partner Logo 12" class="h-44 md:h-40 mx-4 md:mx-6 filter grayscale hover:grayscale-0 transition-all duration-300">
+                                <img src="./images/partenaires/par13.png" alt="Partner Logo 13" class="h-44 md:h-40 mx-4 md:mx-6 filter grayscale hover:grayscale-0 transition-all duration-300">
+                                <img src="./images/partenaires/par14.png" alt="Partner Logo 14" class="h-44 md:h-40 mx-4 md:mx-6 filter grayscale hover:grayscale-0 transition-all duration-300">
+                                <img src="./images/partenaires/par15.png" alt="Partner Logo 15" class="h-44 md:h-40 mx-4 md:mx-6 filter grayscale hover:grayscale-0 transition-all duration-300">
+                                <img src="./images/partenaires/par16.png" alt="Partner Logo 16" class="h-44 md:h-40 mx-4 md:mx-6 filter grayscale hover:grayscale-0 transition-all duration-300">
+                                <img src="./images/partenaires/par17.png" alt="Partner Logo 17" class="h-44 md:h-40 mx-4 md:mx-6 filter grayscale hover:grayscale-0 transition-all duration-300">
+                                <img src="./images/partenaires/par18.png" alt="Partner Logo 18" class="h-44 md:h-40 mx-4 md:mx-6 filter grayscale hover:grayscale-0 transition-all duration-300">
+                                <img src="./images/partenaires/par19.png" alt="Partner Logo 19" class="h-44 md:h-40 mx-4 md:mx-6 filter grayscale hover:grayscale-0 transition-all duration-300">
+                                <img src="./images/partenaires/par20.png" alt="Partner Logo 20" class="h-44 md:h-40 mx-4 md:mx-6 filter grayscale hover:grayscale-0 transition-all duration-300">
+                                <img src="./images/partenaires/par21.png" alt="Partner Logo 21" class="h-44 md:h-40 mx-4 md:mx-6 filter grayscale hover:grayscale-0 transition-all duration-300">
+                                <!-- duplicate set -->
+                                 <img src="./images/partenaires/par6.png" alt="Partner Logo 6" class="h-44 md:h-40 mx-4 md:mx-6 filter grayscale hover:grayscale-0 transition-all duration-300">
+                                <img src="./images/partenaires/par7.png" alt="Partner Logo 7" class="h-44 md:h-40 mx-4 md:mx-6 filter grayscale hover:grayscale-0 transition-all duration-300">
+                                <img src="./images/partenaires/par8.png" alt="Partner Logo 8" class="h-44 md:h-40 mx-4 md:mx-6 filter grayscale hover:grayscale-0 transition-all duration-300">
+                                <img src="./images/partenaires/par9.png" alt="Partner Logo 9" class="h-44 md:h-40 mx-4 md:mx-6 filter grayscale hover:grayscale-0 transition-all duration-300">
+                                <img src="./images/partenaires/par10.png" alt="Partner Logo 10" class="h-44 md:h-40 mx-4 md:mx-6 filter grayscale hover:grayscale-0 transition-all duration-300">
+                                <img src="./images/partenaires/par11.png" alt="Partner Logo 11" class="h-44 md:h-40 mx-4 md:mx-6 filter grayscale hover:grayscale-0 transition-all duration-300">
+                                <img src="./images/partenaires/par12.png" alt="Partner Logo 12" class="h-44 md:h-40 mx-4 md:mx-6 filter grayscale hover:grayscale-0 transition-all duration-300">
+                                <img src="./images/partenaires/par13.png" alt="Partner Logo 13" class="h-44 md:h-40 mx-4 md:mx-6 filter grayscale hover:grayscale-0 transition-all duration-300">
+                                <img src="./images/partenaires/par14.png" alt="Partner Logo 14" class="h-44 md:h-40 mx-4 md:mx-6 filter grayscale hover:grayscale-0 transition-all duration-300">
+                                <img src="./images/partenaires/par15.png" alt="Partner Logo 15" class="h-44 md:h-40 mx-4 md:mx-6 filter grayscale hover:grayscale-0 transition-all duration-300">
+                                <img src="./images/partenaires/par16.png" alt="Partner Logo 16" class="h-44 md:h-40 mx-4 md:mx-6 filter grayscale hover:grayscale-0 transition-all duration-300">
+                                <img src="./images/partenaires/par17.png" alt="Partner Logo 17" class="h-44 md:h-40 mx-4 md:mx-6 filter grayscale hover:grayscale-0 transition-all duration-300">
+                                <img src="./images/partenaires/par18.png" alt="Partner Logo 18" class="h-44 md:h-40 mx-4 md:mx-6 filter grayscale hover:grayscale-0 transition-all duration-300">
+                                <img src="./images/partenaires/par19.png" alt="Partner Logo 19" class="h-44 md:h-40 mx-4 md:mx-6 filter grayscale hover:grayscale-0 transition-all duration-300">
+                                <img src="./images/partenaires/par20.png" alt="Partner Logo 20" class="h-44 md:h-40 mx-4 md:mx-6 filter grayscale hover:grayscale-0 transition-all duration-300">
+                                <img src="./images/partenaires/par21.png" alt="Partner Logo 21" class="h-44 md:h-40 mx-4 md:mx-6 filter grayscale hover:grayscale-0 transition-all duration-300">
+                                <!-- duplicate set -->
+                                 <img src="./images/partenaires/par6.png" alt="Partner Logo 6" class="h-44 md:h-40 mx-4 md:mx-6 filter grayscale hover:grayscale-0 transition-all duration-300">
+                                <img src="./images/partenaires/par7.png" alt="Partner Logo 7" class="h-44 md:h-40 mx-4 md:mx-6 filter grayscale hover:grayscale-0 transition-all duration-300">
+                                <img src="./images/partenaires/par8.png" alt="Partner Logo 8" class="h-44 md:h-40 mx-4 md:mx-6 filter grayscale hover:grayscale-0 transition-all duration-300">
+                                <img src="./images/partenaires/par9.png" alt="Partner Logo 9" class="h-44 md:h-40 mx-4 md:mx-6 filter grayscale hover:grayscale-0 transition-all duration-300">
+                                <img src="./images/partenaires/par10.png" alt="Partner Logo 10" class="h-44 md:h-40 mx-4 md:mx-6 filter grayscale hover:grayscale-0 transition-all duration-300">
+                                <img src="./images/partenaires/par11.png" alt="Partner Logo 11" class="h-44 md:h-40 mx-4 md:mx-6 filter grayscale hover:grayscale-0 transition-all duration-300">
+                                <img src="./images/partenaires/par12.png" alt="Partner Logo 12" class="h-44 md:h-40 mx-4 md:mx-6 filter grayscale hover:grayscale-0 transition-all duration-300">
+                                <img src="./images/partenaires/par13.png" alt="Partner Logo 13" class="h-44 md:h-40 mx-4 md:mx-6 filter grayscale hover:grayscale-0 transition-all duration-300">
+                                <img src="./images/partenaires/par14.png" alt="Partner Logo 14" class="h-44 md:h-40 mx-4 md:mx-6 filter grayscale hover:grayscale-0 transition-all duration-300">
+                                <img src="./images/partenaires/par15.png" alt="Partner Logo 15" class="h-44 md:h-40 mx-4 md:mx-6 filter grayscale hover:grayscale-0 transition-all duration-300">
+                                <img src="./images/partenaires/par16.png" alt="Partner Logo 16" class="h-44 md:h-40 mx-4 md:mx-6 filter grayscale hover:grayscale-0 transition-all duration-300">
+                                <img src="./images/partenaires/par17.png" alt="Partner Logo 17" class="h-44 md:h-40 mx-4 md:mx-6 filter grayscale hover:grayscale-0 transition-all duration-300">
+                                <img src="./images/partenaires/par18.png" alt="Partner Logo 18" class="h-44 md:h-40 mx-4 md:mx-6 filter grayscale hover:grayscale-0 transition-all duration-300">
+                                <img src="./images/partenaires/par19.png" alt="Partner Logo 19" class="h-44 md:h-40 mx-4 md:mx-6 filter grayscale hover:grayscale-0 transition-all duration-300">
+                                <img src="./images/partenaires/par20.png" alt="Partner Logo 20" class="h-44 md:h-40 mx-4 md:mx-6 filter grayscale hover:grayscale-0 transition-all duration-300">
+                                <img src="./images/partenaires/par21.png" alt="Partner Logo 21" class="h-44 md:h-40 mx-4 md:mx-6 filter grayscale hover:grayscale-0 transition-all duration-300">
+                                <!-- duplicate set -->
+                                 <img src="./images/partenaires/par6.png" alt="Partner Logo 6" class="h-44 md:h-40 mx-4 md:mx-6 filter grayscale hover:grayscale-0 transition-all duration-300">
+                                <img src="./images/partenaires/par7.png" alt="Partner Logo 7" class="h-44 md:h-40 mx-4 md:mx-6 filter grayscale hover:grayscale-0 transition-all duration-300">
+                                <img src="./images/partenaires/par8.png" alt="Partner Logo 8" class="h-44 md:h-40 mx-4 md:mx-6 filter grayscale hover:grayscale-0 transition-all duration-300">
+                                <img src="./images/partenaires/par9.png" alt="Partner Logo 9" class="h-44 md:h-40 mx-4 md:mx-6 filter grayscale hover:grayscale-0 transition-all duration-300">
+                                <img src="./images/partenaires/par10.png" alt="Partner Logo 10" class="h-44 md:h-40 mx-4 md:mx-6 filter grayscale hover:grayscale-0 transition-all duration-300">
+                                <img src="./images/partenaires/par11.png" alt="Partner Logo 11" class="h-44 md:h-40 mx-4 md:mx-6 filter grayscale hover:grayscale-0 transition-all duration-300">
+                                <img src="./images/partenaires/par12.png" alt="Partner Logo 12" class="h-44 md:h-40 mx-4 md:mx-6 filter grayscale hover:grayscale-0 transition-all duration-300">
+                                <img src="./images/partenaires/par13.png" alt="Partner Logo 13" class="h-44 md:h-40 mx-4 md:mx-6 filter grayscale hover:grayscale-0 transition-all duration-300">
+                                <img src="./images/partenaires/par14.png" alt="Partner Logo 14" class="h-44 md:h-40 mx-4 md:mx-6 filter grayscale hover:grayscale-0 transition-all duration-300">
+                                <img src="./images/partenaires/par15.png" alt="Partner Logo 15" class="h-44 md:h-40 mx-4 md:mx-6 filter grayscale hover:grayscale-0 transition-all duration-300">
+                                <img src="./images/partenaires/par16.png" alt="Partner Logo 16" class="h-44 md:h-40 mx-4 md:mx-6 filter grayscale hover:grayscale-0 transition-all duration-300">
+                                <img src="./images/partenaires/par17.png" alt="Partner Logo 17" class="h-44 md:h-40 mx-4 md:mx-6 filter grayscale hover:grayscale-0 transition-all duration-300">
+                                <img src="./images/partenaires/par18.png" alt="Partner Logo 18" class="h-44 md:h-40 mx-4 md:mx-6 filter grayscale hover:grayscale-0 transition-all duration-300">
+                                <img src="./images/partenaires/par19.png" alt="Partner Logo 19" class="h-44 md:h-40 mx-4 md:mx-6 filter grayscale hover:grayscale-0 transition-all duration-300">
+                                <img src="./images/partenaires/par20.png" alt="Partner Logo 20" class="h-44 md:h-40 mx-4 md:mx-6 filter grayscale hover:grayscale-0 transition-all duration-300">
+                                <img src="./images/partenaires/par21.png" alt="Partner Logo 21" class="h-44 md:h-40 mx-4 md:mx-6 filter grayscale hover:grayscale-0 transition-all duration-300">
+                            </div>
                         </div>
                     </div>
                 </div>
+                </div>
+                    <!-- Arrow Buttons -->
+                    <button id="partner-scroll-left" class="absolute top-1/2 left-2 transform -translate-y-1/2 bg-black bg-opacity-50 text-white p-3 rounded-full hover:bg-opacity-75 focus:outline-none z-10">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <button id="partner-scroll-right" class="absolute top-1/2 right-2 transform -translate-y-1/2 bg-black bg-opacity-50 text-white p-3 rounded-full hover:bg-opacity-75 focus:outline-none z-10">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
                 </div>
             </div>
         </section>
@@ -2136,6 +2336,55 @@
                     behavior: 'smooth'
                 });
             });
+        }
+
+         // Partner Logos Carousel Arrows
+        const partnerLogosOuterContainer = document.querySelector('.partner-logos-outer-container');
+        const partnerScrollLeftBtn = document.getElementById('partner-scroll-left');
+        const partnerScrollRightBtn = document.getElementById('partner-scroll-right');
+
+        if (partnerLogosOuterContainer && partnerScrollLeftBtn && partnerScrollRightBtn) {
+            const scrollAmount = 250; // Pixels to scroll, adjust as needed
+
+            function updatePartnerArrowVisibility() {
+                if (!partnerLogosOuterContainer) return;
+                const tolerance = 2; // Small tolerance for scroll position calculation
+                const canScrollLeft = partnerLogosOuterContainer.scrollLeft > tolerance;
+                const canScrollRight = (partnerLogosOuterContainer.scrollWidth - partnerLogosOuterContainer.clientWidth - partnerLogosOuterContainer.scrollLeft) > tolerance;
+
+                partnerScrollLeftBtn.style.display = canScrollLeft ? 'block' : 'none';
+                partnerScrollRightBtn.style.display = canScrollRight ? 'block' : 'none';
+            }
+
+            partnerScrollLeftBtn.addEventListener('click', () => {
+                partnerLogosOuterContainer.scrollBy({
+                    left: -scrollAmount,
+                    behavior: 'smooth'
+                });
+            });
+
+            partnerScrollRightBtn.addEventListener('click', () => {
+                partnerLogosOuterContainer.scrollBy({
+                    left: scrollAmount,
+                    behavior: 'smooth'
+                });
+            });
+
+            // Initial visibility check and update on scroll or resize
+            updatePartnerArrowVisibility();
+            partnerLogosOuterContainer.addEventListener('scroll', updatePartnerArrowVisibility);
+            window.addEventListener('resize', updatePartnerArrowVisibility);
+
+            // Ensure the hover effect for pausing animation targets the new relative parent
+            const partnerCarouselWrapper = document.querySelector('#partner-logos .relative');
+            const animatedLogoSet = partnerLogosOuterContainer.querySelector('.animate-scroll-logos');
+            if (partnerCarouselWrapper && animatedLogoSet) {
+                 // The CSS rule `.partner-logos-outer-container:hover .animate-scroll-logos` should be updated
+                 // to `#partner-logos .relative:hover .animate-scroll-logos` if you want hover on arrows to pause too.
+                 // Or, handle with JS if preferred, but CSS is often cleaner for hover states.
+            }
+        } else {
+            console.error("Éléments du carrousel des partenaires non trouvés.");
         }
 
 
