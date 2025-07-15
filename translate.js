@@ -417,6 +417,9 @@ function setLanguage(lang) {
                 element.textContent = translations['fr'][key];
             }
         }
+        if (translations[lang] && translations[lang]['promoOffer']) {
+            updatePromoBar(translations[lang]['promoOffer']);
+        }
     });
     
     document.querySelectorAll('[data-translate-placeholder]').forEach(element => {
@@ -480,3 +483,20 @@ function initializeLanguage() {
         setLanguage('fr');
     }
 }
+function updatePromoBar(text) {
+    const promoWrapper = document.querySelector('.promotion-text-wrapper');
+    if (promoWrapper) {
+        promoWrapper.innerHTML = '';
+        let totalWidth = 0;
+        let spanCount = 0;
+        while (totalWidth < window.innerWidth * 4) {
+            const span = document.createElement('span');
+            span.innerHTML = text;
+            promoWrapper.appendChild(span);
+            totalWidth = promoWrapper.scrollWidth;
+            spanCount++;
+        }
+        promoWrapper.style.animationDuration = (spanCount * 5) + 's';
+    }
+}
+
