@@ -176,9 +176,8 @@
                 left: 100%;
             }
         }
-        /* Promotion Bar */
         .promotion-bar {
-            background-color: #daa570; /* Beige color from your theme */
+            background-color: #daa570;
             color: white;
             padding: 10px 0;
             font-size: 0.9rem;
@@ -189,18 +188,20 @@
             top: 0;
             left: 0;
             width: 100%;
-            z-index: 9990; /* Below preloader (9999), above most other fixed elements */
+            z-index: 9990;
         }
         .promotion-text-wrapper {
             display: inline-block;
-            animation: scroll-text-kf 50s linear infinite;
+            width: max-content;
+            min-width: 100vw;
+            animation: scroll-text-kf 40s linear infinite;
         }
         .promotion-text-wrapper span {
-            padding-right: 3em; /* Space between the duplicated messages */
+            padding-right: 3em;
         }
         @keyframes scroll-text-kf {
-            0% { transform: translateX(0%); }
-            100% { transform: translateX(-50%); } /* Scrolls one full copy of the text */
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
         }
 
         /* Partner Logos Carousel */
@@ -324,7 +325,7 @@
         </button>
         <div class="flex flex-col items-center space-y-6 text-center">
             <a href="#" data-target="accueil" class="mobile-menu-link text-3xl font-medium text-gray-800 hover:text-beige-600 transition-colors" data-translate="navAccueil">Accueil</a>
-            <a href="#" data-target="acceuil" class="mobile-menu-link text-3xl font-medium text-gray-800 hover:text-beige-600 transition-colors" data-translate="navAPropos">À propos</a>
+            <a href="#about-content" data-target="accueil" class="mobile-menu-link text-3xl font-medium text-gray-800 hover:text-beige-600 transition-colors" data-translate="navAPropos">À propos</a>
             <a href="#" data-target="services-page" class="mobile-menu-link text-3xl font-medium text-gray-800 hover:text-beige-600 transition-colors" data-translate="navServices">Services</a>
             <a href="#" data-target="gallery-page" class="mobile-menu-link text-3xl font-medium text-gray-800 hover:text-beige-600 transition-colors" data-translate="navGalerie">Galerie</a>
             <a href="#booking-content" class="mobile-menu-link text-3xl font-medium text-gray-800 hover:text-beige-600 transition-colors" data-translate="navContact">Contact</a>
@@ -413,7 +414,7 @@
                 <!-- Desktop Menu -->
                 <div class="hidden md:grid md:grid-cols-5 md:gap-3 flex-auto items-center">
                     <a href="#" data-target="accueil" class="nav-link text-gray-700 hover:text-beige-600 hover:bg-beige-100 transition block py-2 px-3 text-center border border-beige-300 rounded-sm" data-translate="navAccueil">Accueil</a>
-                    <a href="#about-content" class="nav-link text-gray-700 hover:text-beige-600 hover:bg-beige-100 transition block py-2 px-3 text-center border border-beige-300 rounded-sm" data-translate="navAPropos">À propos</a>
+                    <a href="#about-content" data-target="accueil" class="nav-link text-gray-700 hover:text-beige-600 hover:bg-beige-100 transition block py-2 px-3 text-center border border-beige-300 rounded-sm" data-translate="navAPropos">À propos</a>
                     <a href="#" data-target="services-page" class="nav-link text-gray-700 hover:text-beige-600 hover:bg-beige-100 transition block py-2 px-3 text-center border border-beige-300 rounded-sm" data-translate="navServices">Services</a>
                     <a href="#" data-target="gallery-page" class="nav-link text-gray-700 hover:text-beige-600 hover:bg-beige-100 transition block py-2 px-3 text-center border border-beige-300 rounded-sm" data-translate="navGalerie">Galerie</a>
                     <a href="#booking-content" class="nav-link text-gray-700 hover:text-beige-600 hover:bg-beige-100 transition block py-2 px-3 text-center border border-beige-300 rounded-sm" data-translate="navContact">Contact</a>
@@ -1557,6 +1558,26 @@
         const contactDetailsSection = document.getElementById('booking-content');
         const pageFooter = document.querySelector('footer#contact');
 
+        // Ajoute ce bloc pour que le bouton "À propos" SPA affiche la section accueil comme "Accueil"
+        document.querySelectorAll('a[href="#about-content"]').forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                showContentSection('accueil'); // Affiche la section accueil
+                setTimeout(() => {
+                    const aboutSection = document.getElementById('about-content');
+                    if (aboutSection) {
+                        window.scrollTo({
+                            top: aboutSection.offsetTop - (mainNavbar ? mainNavbar.offsetHeight : 0) - 20,
+                            behavior: 'smooth'
+                        });
+                    }
+                }, 100);
+                if (mobileMenu.classList.contains('visible')) {
+                    mobileMenu.classList.remove('visible');
+                    document.body.style.overflow = '';
+                }
+            });
+        });
 
         function showContentSection(targetId) {
             let sectionFound = false;
