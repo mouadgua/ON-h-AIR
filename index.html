@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Libertinus+Math&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap" rel="stylesheet">
     <script src="translate.js" defer></script>
     <script src="script.js" defer></script>
@@ -52,9 +54,45 @@
             background-size: cover;
             background-position: center;
         }
-        .service-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 15px 30px rgba(218, 165, 112, 0.2);
+        /* Remplace le style .service-card existant par celui-ci pour un look sobre, noir & blanc, moderne */
+
+        .service-card {
+            background: none;
+            border: none;
+            box-shadow: none;
+            border-radius: 0;
+            padding: 0.7em 0;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            min-height: unset;
+            position: relative;
+            overflow: visible;
+        }
+
+        .service-card h4 {
+            font-family: "Libertinus Math", system-ui;
+            font-size: 1.35rem;
+            font-weight: 700;
+            color: #111;
+            margin: 0;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            line-height: 1.2;
+            text-shadow: 0 2px 8px rgba(0,0,0,0.07);
+        }
+
+        .service-card span {
+            font-size: 1.08rem;
+            font-weight: 600;
+            color: #222;
+            margin: 0;
+            background: none;
+            border: none;
+            box-shadow: none;
+            border-radius: 0;
+            padding: 0;
         }
         .testimonial-card {
             background: linear-gradient(to bottom right, #fff9f5, #fff);
@@ -243,13 +281,22 @@
         .lightbox-next-btn { right: 10px; }
         
      </style>
-    <script src="script.js"></script>
 </head>
 <body class="bg-white text-gray-700">
     <!-- Promotion Bar -->
     <div class="promotion-bar">
         <div class="promotion-text-wrapper" data-translate="promoOffer">
             <!-- Add your promotional messages here. Duplicate for seamless scroll -->
+            <span>🎉 Offre Spéciale: -10% sur votre première visite! ✨ Réservez dès maintenant! </span>
+            <span>🎉 Offre Spéciale: -10% sur votre première visite! ✨ Réservez dès maintenant! </span>
+            <span>🎉 Offre Spéciale: -10% sur votre première visite! ✨ Réservez dès maintenant! </span>
+            <span>🎉 Offre Spéciale: -10% sur votre première visite! ✨ Réservez dès maintenant! </span>
+            <span>🎉 Offre Spéciale: -10% sur votre première visite! ✨ Réservez dès maintenant! </span>
+            <span>🎉 Offre Spéciale: -10% sur votre première visite! ✨ Réservez dès maintenant! </span>
+            <span>🎉 Offre Spéciale: -10% sur votre première visite! ✨ Réservez dès maintenant! </span>
+            <span>🎉 Offre Spéciale: -10% sur votre première visite! ✨ Réservez dès maintenant! </span>
+            <span>🎉 Offre Spéciale: -10% sur votre première visite! ✨ Réservez dès maintenant! </span>
+            <span>🎉 Offre Spéciale: -10% sur votre première visite! ✨ Réservez dès maintenant! </span>
             <span>🎉 Offre Spéciale: -10% sur votre première visite! ✨ Réservez dès maintenant! </span>
             <span>🎉 Offre Spéciale: -10% sur votre première visite! ✨ Réservez dès maintenant! </span>
             <span>🎉 Offre Spéciale: -10% sur votre première visite! ✨ Réservez dès maintenant! </span>
@@ -930,141 +977,143 @@
             <div id="services-list-container">
                 <!-- ÉPILATION -->
                 <div class="service-category mb-10">
-                    <h3 class="font-serif text-2xl font-bold text-beige-600 mb-4">ÉPILATION</h3>
+                    <h3 class="font-serif text-2xl font-bold text-beige-600 mb-4" data-translate="serviceCategoryWaxing">ÉPILATION</h3>
                     <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-                        <div class="bg-white rounded-lg shadow p-4 flex flex-col justify-between service-card"><h4 class="font-semibold mb-2">Duvet</h4><span class="font-bold text-beige-600 text-lg">20 dh</span></div>
-                        <div class="bg-white rounded-lg shadow p-4 flex flex-col justify-between service-card"><h4 class="font-semibold mb-2">Sourcil</h4><span class="font-bold text-beige-600 text-lg">30 dh</span></div>
-                        <div class="bg-white rounded-lg shadow p-4 flex flex-col justify-between service-card"><h4 class="font-semibold mb-2">Menton</h4><span class="font-bold text-beige-600 text-lg">20 dh</span></div>
-                        <div class="bg-white rounded-lg shadow p-4 flex flex-col justify-between service-card"><h4 class="font-semibold mb-2">Visage Complet</h4><span class="font-bold text-beige-600 text-lg">80 dh</span></div>
-                        <div class="bg-white rounded-lg shadow p-4 flex flex-col justify-between service-card"><h4 class="font-semibold mb-2">Bras</h4><span class="font-bold text-beige-600 text-lg">50 dh</span></div>
-                        <div class="bg-white rounded-lg shadow p-4 flex flex-col justify-between service-card"><h4 class="font-semibold mb-2">Demis jambe</h4><span class="font-bold text-beige-600 text-lg">50 dh</span></div>
-                        <div class="bg-white rounded-lg shadow p-4 flex flex-col justify-between service-card"><h4 class="font-semibold mb-2">Jambe complète</h4><span class="font-bold text-beige-600 text-lg">100 dh</span></div>
-                        <div class="bg-white rounded-lg shadow p-4 flex flex-col justify-between service-card"><h4 class="font-semibold mb-2">Aisselles</h4><span class="font-bold text-beige-600 text-lg">30 dh</span></div>
-                        <div class="bg-white rounded-lg shadow p-4 flex flex-col justify-between service-card"><h4 class="font-semibold mb-2">Maillot</h4><span class="font-bold text-beige-600 text-lg">70 dh</span></div>
-                        <div class="bg-white rounded-lg shadow p-4 flex flex-col justify-between service-card"><h4 class="font-semibold mb-2">Épilation complète</h4><span class="font-bold text-beige-600 text-lg">280 dh</span></div>
+                        <div class="bg-white rounded-lg shadow p-4 flex flex-col justify-between service-card"><h4 class="font-semibold mb-2" data-translate="serviceUpperLipWaxTitle">Duvet</h4><span class="font-bold text-beige-600 text-lg">20 dh</span></div>
+                        <div class="bg-white rounded-lg shadow p-4 flex flex-col justify-between service-card"><h4 class="font-semibold mb-2" data-translate="serviceEyebrowWaxTitle">Sourcil</h4><span class="font-bold text-beige-600 text-lg">30 dh</span></div>
+                        <div class="bg-white rounded-lg shadow p-4 flex flex-col justify-between service-card"><h4 class="font-semibold mb-2" data-translate="serviceChinWaxTitle">Menton</h4><span class="font-bold text-beige-600 text-lg">15 dh</span></div>
+                        <div class="bg-white rounded-lg shadow p-4 flex flex-col justify-between service-card"><h4 class="font-semibold mb-2" data-translate="serviceFullFaceWaxTitle">Visage Complet</h4><span class="font-bold text-beige-600 text-lg">80 dh</span></div>
+                        <div class="bg-white rounded-lg shadow p-4 flex flex-col justify-between service-card"><h4 class="font-semibold mb-2" data-translate="serviceArmsWaxTitle">Bras</h4><span class="font-bold text-beige-600 text-lg">50 dh</span></div>
+                        <div class="bg-white rounded-lg shadow p-4 flex flex-col justify-between service-card"><h4 class="font-semibold mb-2" data-translate="serviceHalfLegsWaxTitle">Demis jambe</h4><span class="font-bold text-beige-600 text-lg">50 dh</span></div>
+                        <div class="bg-white rounded-lg shadow p-4 flex flex-col justify-between service-card"><h4 class="font-semibold mb-2" data-translate="serviceFullLegsWaxTitle">Jambe complète</h4><span class="font-bold text-beige-600 text-lg">100 dh</span></div>
+                        <div class="bg-white rounded-lg shadow p-4 flex flex-col justify-between service-card"><h4 class="font-semibold mb-2" data-translate="serviceUnderarmsWaxTitle">Aisselles</h4><span class="font-bold text-beige-600 text-lg">30 dh</span></div>
+                        <div class="bg-white rounded-lg shadow p-4 flex flex-col justify-between service-card"><h4 class="font-semibold mb-2" data-translate="serviceBikiniWaxTitle">Maillot</h4><span class="font-bold text-beige-600 text-lg">70 dh</span></div>
+                        <div class="bg-white rounded-lg shadow p-4 flex flex-col justify-between service-card"><h4 class="font-semibold mb-2" data-translate="serviceFullBodyWaxTitle">Épilation complète</h4><span class="font-bold text-beige-600 text-lg">280 dh</span></div>
                     </div>
                 </div>
                 <!-- MASSAGE -->
                 <div class="service-category mb-10">
-                    <h3 class="font-serif text-2xl font-bold text-beige-600 mb-4">MASSAGE</h3>
+                    <h3 class="font-serif text-2xl font-bold text-beige-600 mb-4" data-translate="serviceCategoryMassages">MASSAGE</h3>
                     <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-                        <div class="bg-white rounded-lg shadow p-4 flex flex-col justify-between service-card"><h4 class="font-semibold mb-2">Massage Relaxant 30min</h4><span class="font-bold text-beige-600 text-lg">200 dh</span></div>
-                        <div class="bg-white rounded-lg shadow p-4 flex flex-col justify-between service-card"><h4 class="font-semibold mb-2">Massage Relaxant 45min</h4><span class="font-bold text-beige-600 text-lg">250 dh</span></div>
-                        <div class="bg-white rounded-lg shadow p-4 flex flex-col justify-between service-card"><h4 class="font-semibold mb-2">Massage Relaxant 60min</h4><span class="font-bold text-beige-600 text-lg">300 dh</span></div>
-                        <div class="bg-white rounded-lg shadow p-4 flex flex-col justify-between service-card"><h4 class="font-semibold mb-2">Massage Nuque et épaules 15min</h4><span class="font-bold text-beige-600 text-lg">100 dh</span></div>
-                        <div class="bg-white rounded-lg shadow p-4 flex flex-col justify-between service-card"><h4 class="font-semibold mb-2">Massage cranien et faciale 15min</h4><span class="font-bold text-beige-600 text-lg">100 dh</span></div>
-                        <div class="bg-white rounded-lg shadow p-4 flex flex-col justify-between service-card"><h4 class="font-semibold mb-2">Massage des pieds 15min</h4><span class="font-bold text-beige-600 text-lg">100 dh</span></div>
+                        <div class="bg-white rounded-lg shadow p-4 flex flex-col justify-between service-card"><h4 class="font-semibold mb-2" data-translate="serviceRelaxingMassage30Title">Massage Relaxant 30min</h4><span class="font-bold text-beige-600 text-lg">200 dh</span></div>
+                        <div class="bg-white rounded-lg shadow p-4 flex flex-col justify-between service-card"><h4 class="font-semibold mb-2" data-translate="serviceRelaxingMassage45Title">Massage Relaxant 45min</h4><span class="font-bold text-beige-600 text-lg">250 dh</span></div>
+                        <div class="bg-white rounded-lg shadow p-4 flex flex-col justify-between service-card"><h4 class="font-semibold mb-2" data-translate="serviceRelaxingMassage60Title">Massage Relaxant 60min</h4><span class="font-bold text-beige-600 text-lg">300 dh</span></div>
+                        <div class="bg-white rounded-lg shadow p-4 flex flex-col justify-between service-card"><h4 class="font-semibold mb-2" data-translate="serviceNeckShoulderMassage15Title">Massage Nuque et épaules 15min</h4><span class="font-bold text-beige-600 text-lg">100 dh</span></div>
+                        <div class="bg-white rounded-lg shadow p-4 flex flex-col justify-between service-card"><h4 class="font-semibold mb-2" data-translate="serviceScalpFacialMassage15Title">Massage cranien et faciale 15min</h4><span class="font-bold text-beige-600 text-lg">100 dh</span></div>
+                        <div class="bg-white rounded-lg shadow p-4 flex flex-col justify-between service-card"><h4 class="font-semibold mb-2" data-translate="serviceFootMassage15Title">Massage des pieds 15min</h4><span class="font-bold text-beige-600 text-lg">100 dh</span></div>
                     </div>
                 </div>
                 <!-- YEUX -->
                 <div class="service-category mb-10">
-                    <h3 class="font-serif text-2xl font-bold text-beige-600 mb-4">YEUX</h3>
+                    <h3 class="font-serif text-2xl font-bold text-beige-600 mb-4" data-translate="serviceCategoryEyes">YEUX</h3>
                     <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-                        <div class="bg-white rounded-lg shadow p-4 flex flex-col justify-between service-card"><h4 class="font-semibold mb-2">Faux cils</h4><span class="font-bold text-beige-600 text-lg">80 dh</span></div>
-                        <div class="bg-white rounded-lg shadow p-4 flex flex-col justify-between service-card"><h4 class="font-semibold mb-2">Coloration des sourcils</h4><span class="font-bold text-beige-600 text-lg">40 dh</span></div>
+                        <div class="bg-white rounded-lg shadow p-4 flex flex-col justify-between service-card"><h4 class="font-semibold mb-2" data-translate="serviceFalseEyelashesTitle">Faux cils</h4><span class="font-bold text-beige-600 text-lg">80 dh</span></div>
+                        <div class="bg-white rounded-lg shadow p-4 flex flex-col justify-between service-card"><h4 class="font-semibold mb-2" data-translate="serviceEyebrowColoringTitle">Coloration des sourcils</h4><span class="font-bold text-beige-600 text-lg">40 dh</span></div>
                     </div>
                 </div>
                 <!-- MAQUILLAGE -->
                 <div class="service-category mb-10">
-                    <h3 class="font-serif text-2xl font-bold text-beige-600 mb-4">MAQUILLAGE</h3>
+                    <h3 class="font-serif text-2xl font-bold text-beige-600 mb-4" data-translate="serviceCategoryMakeup">MAQUILLAGE</h3>
                     <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-                        <div class="bg-white rounded-lg shadow p-4 flex flex-col justify-between service-card"><h4 class="font-semibold mb-2">Maquillage soirée</h4><span class="font-bold text-beige-600 text-lg">300 dh</span></div>
-                        <div class="bg-white rounded-lg shadow p-4 flex flex-col justify-between service-card"><h4 class="font-semibold mb-2">Maquillage Fiançailles</h4><span class="font-bold text-beige-600 text-lg">1000 dh</span></div>
-                        <div class="bg-white rounded-lg shadow p-4 flex flex-col justify-between service-card"><h4 class="font-semibold mb-2">Maquillage de la mariée</h4><span class="font-bold text-beige-600 text-lg">1500 dh</span></div>
-                        <div class="bg-white rounded-lg shadow p-4 flex flex-col justify-between service-card"><h4 class="font-semibold mb-2">Pack de la mariée</h4><span class="font-bold text-beige-600 text-lg">4000 dh</span></div>
-                        <div class="bg-white rounded-lg shadow p-4 flex flex-col justify-between service-card"><h4 class="font-semibold mb-2">Pack de la mariée avec accompagnement</h4><span class="font-bold text-beige-600 text-lg">6000 dh</span></div>
+                        <div class="bg-white rounded-lg shadow p-4 flex flex-col justify-between service-card"><h4 class="font-semibold mb-2" data-translate="serviceEveningMakeupTitle">Maquillage soirée</h4><span class="font-bold text-beige-600 text-lg">300 dh</span></div>
+                        <div class="bg-white rounded-lg shadow p-4 flex flex-col justify-between service-card"><h4 class="font-semibold mb-2" data-translate="serviceEngagementMakeupTitle">Maquillage Fiançailles</h4><span class="font-bold text-beige-600 text-lg">1000 dh</span></div>
+                        <div class="bg-white rounded-lg shadow p-4 flex flex-col justify-between service-card"><h4 class="font-semibold mb-2" data-translate="serviceBridalMakeupTitle">Maquillage de la mariée</h4><span class="font-bold text-beige-600 text-lg">1500 dh</span></div>
+                        <div class="bg-white rounded-lg shadow p-4 flex flex-col justify-between service-card"><h4 class="font-semibold mb-2" data-translate="serviceBridalPackageTitle">Pack de la mariée</h4><span class="font-bold text-beige-600 text-lg">4000 dh</span></div>
+                        <div class="bg-white rounded-lg shadow p-4 flex flex-col justify-between service-card"><h4 class="font-semibold mb-2" data-translate="serviceBridalPackageWithSupportTitle">Pack de la mariée avec accompagnement</h4><span class="font-bold text-beige-600 text-lg">6000 dh</span></div>
                     </div>
                 </div>
                 <!-- COIFFURE -->
                 <div class="service-category mb-10">
-                    <h3 class="font-serif text-2xl font-bold text-beige-600 mb-4">COIFFURE</h3>
+                    <h3 class="font-serif text-2xl font-bold text-beige-600 mb-4" data-translate="serviceCategoryCoiffure">COIFFURE</h3>
                     <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-                        <div class="bg-white rounded-lg shadow p-4 flex flex-col justify-between service-card"><h4 class="font-semibold mb-2">Brushing</h4><span class="font-bold text-beige-600 text-lg">50 dh</span></div>
-                        <div class="bg-white rounded-lg shadow p-4 flex flex-col justify-between service-card"><h4 class="font-semibold mb-2">SHP+ Masque+ Brushing</h4><span class="font-bold text-beige-600 text-lg">70 dh</span></div>
-                        <div class="bg-white rounded-lg shadow p-4 flex flex-col justify-between service-card"><h4 class="font-semibold mb-2">SHP spécifique+Masque traitant+ Brush</h4><span class="font-bold text-beige-600 text-lg">100 dh</span></div>
-                        <div class="bg-white rounded-lg shadow p-4 flex flex-col justify-between service-card"><h4 class="font-semibold mb-2">Wavy</h4><span class="font-bold text-beige-600 text-lg">100 dh</span></div>
-                        <div class="bg-white rounded-lg shadow p-4 flex flex-col justify-between service-card"><h4 class="font-semibold mb-2">Wavy + SHP+ Masque</h4><span class="font-bold text-beige-600 text-lg">120 dh</span></div>
-                        <div class="bg-white rounded-lg shadow p-4 flex flex-col justify-between service-card"><h4 class="font-semibold mb-2">Coupe correction et pointes</h4><span class="font-bold text-beige-600 text-lg">140 dh</span></div>
-                        <div class="bg-white rounded-lg shadow p-4 flex flex-col justify-between service-card"><h4 class="font-semibold mb-2">Coupe transformation</h4><span class="font-bold text-beige-600 text-lg">+250 dh</span></div>
+                        <div class="bg-white rounded-lg shadow p-4 flex flex-col justify-between service-card"><h4 class="font-semibold mb-2" data-translate="serviceBrushingTitle">Brushing</h4><span class="font-bold text-beige-600 text-lg">50 dh</span></div>
+                        <div class="bg-white rounded-lg shadow p-4 flex flex-col justify-between service-card"><h4 class="font-semibold mb-2" data-translate="serviceShampooMaskBrushingTitle">SHP+ Masque+ Brushing</h4><span class="font-bold text-beige-600 text-lg">70 dh</span></div>
+                        <div class="bg-white rounded-lg shadow p-4 flex flex-col justify-between service-card"><h4 class="font-semibold mb-2" data-translate="serviceSpecificShampooMaskBrushingTitle">SHP spécifique+Masque traitant+ Brush</h4><span class="font-bold text-beige-600 text-lg">100 dh</span></div>
+                        <div class="bg-white rounded-lg shadow p-4 flex flex-col justify-between service-card"><h4 class="font-semibold mb-2" data-translate="serviceWavyTitle">Wavy</h4><span class="font-bold text-beige-600 text-lg">100 dh</span></div>
+                        <div class="bg-white rounded-lg shadow p-4 flex flex-col justify-between service-card"><h4 class="font-semibold mb-2" data-translate="serviceWavyTitle">Wavy + SHP+ Masque</h4><span class="font-bold text-beige-600 text-lg">120 dh</span></div>
+                        <div class="bg-white rounded-lg shadow p-4 flex flex-col justify-between service-card"><h4 class="font-semibold mb-2" data-translate="serviceCutTitle">Coupe correction et pointes</h4><span class="font-bold text-beige-600 text-lg">140 dh</span></div>
+                        <div class="bg-white rounded-lg shadow p-4 flex flex-col justify-between service-card"><h4 class="font-semibold mb-2" data-translate="serviceTransformationCutTitle">Coupe transformation</h4><span class="font-bold text-beige-600 text-lg">+250 dh</span></div>
                         <div class="bg-white rounded-lg shadow p-4 flex flex-col justify-between service-card"><h4 class="font-semibold mb-2">Coup enfant</h4><span class="font-bold text-beige-600 text-lg">100 dh</span></div>
-                        <div class="bg-white rounded-lg shadow p-4 flex flex-col justify-between service-card"><h4 class="font-semibold mb-2">Consultation et diagnostique</h4><span class="font-bold text-beige-600 text-lg">200 dh</span></div>
-                        <div class="bg-white rounded-lg shadow p-4 flex flex-col justify-between service-card"><h4 class="font-semibold mb-2">Diagnostique et mèche test*</h4><span class="font-bold text-beige-600 text-lg">300 dh</span></div>
+                        <div class="bg-white rounded-lg shadow p-4 flex flex-col justify-between service-card"><h4 class="font-semibold mb-2" data-translate="serviceConsultationDiagnosisTitle">Consultation et diagnostique</h4><span class="font-bold text-beige-600 text-lg">200 dh</span></div>
+                        <div class="bg-white rounded-lg shadow p-4 flex flex-col justify-between service-card"><h4 class="font-semibold mb-2" data-translate="serviceDiagnosisStrandTestTitle">Diagnostique et mèche test*</h4><span class="font-bold text-beige-600 text-lg">300 dh</span></div>
                     </div>
                     <p class="text-xs text-gray-500 mt-2 ml-2">*à déduire de toutes prestations techniques + à partir de</p>
                 </div>
                 <!-- COLORATION -->
                 <div class="service-category mb-10">
-                    <h3 class="font-serif text-2xl font-bold text-beige-600 mb-4">COLORATION</h3>
+                    <h3 class="font-serif text-2xl font-bold text-beige-600 mb-4" data-translate="serviceCategoryColoration">COLORATION</h3>
                     <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-                        <div class="bg-white rounded-lg shadow p-4 flex flex-col justify-between service-card"><h4 class="font-semibold mb-2">Coloration</h4><span class="font-bold text-beige-600 text-lg">350 dh</span></div>
-                        <div class="bg-white rounded-lg shadow p-4 flex flex-col justify-between service-card"><h4 class="font-semibold mb-2">Coloration sans ammoniaque</h4><span class="font-bold text-beige-600 text-lg">400 dh</span></div>
-                        <div class="bg-white rounded-lg shadow p-4 flex flex-col justify-between service-card"><h4 class="font-semibold mb-2">Coloration racines</h4><span class="font-bold text-beige-600 text-lg">250 dh</span></div>
-                        <div class="bg-white rounded-lg shadow p-4 flex flex-col justify-between service-card"><h4 class="font-semibold mb-2">Coloration racines sans ammoniaque</h4><span class="font-bold text-beige-600 text-lg">300 dh</span></div>
-                        <div class="bg-white rounded-lg shadow p-4 flex flex-col justify-between service-card"><h4 class="font-semibold mb-2">Rinçage et correction de couleur</h4><span class="font-bold text-beige-600 text-lg">+300 dh</span></div>
-                        <div class="bg-white rounded-lg shadow p-4 flex flex-col justify-between service-card"><h4 class="font-semibold mb-2">Reflets Highlight</h4><span class="font-bold text-beige-600 text-lg">+750 dh</span></div>
-                        <div class="bg-white rounded-lg shadow p-4 flex flex-col justify-between service-card"><h4 class="font-semibold mb-2">Ombré</h4><span class="font-bold text-beige-600 text-lg">+1200 dh</span></div>
-                        <div class="bg-white rounded-lg shadow p-4 flex flex-col justify-between service-card"><h4 class="font-semibold mb-2">Balayage</h4><span class="font-bold text-beige-600 text-lg">+1000 dh</span></div>
-                        <div class="bg-white rounded-lg shadow p-4 flex flex-col justify-between service-card"><h4 class="font-semibold mb-2">Airtouch</h4><span class="font-bold text-beige-600 text-lg">+1500 dh</span></div>
+                        <div class="bg-white rounded-lg shadow p-4 flex flex-col justify-between service-card"><h4 class="font-semibold mb-2" data-translate="serviceColoringTitle">Coloration</h4><span class="font-bold text-beige-600 text-lg">350 dh</span></div>
+                        <div class="bg-white rounded-lg shadow p-4 flex flex-col justify-between service-card"><h4 class="font-semibold mb-2" data-translate="serviceAmmoniaFreeColoringTitle">Coloration sans ammoniaque</h4><span class="font-bold text-beige-600 text-lg">400 dh</span></div>
+                        <div class="bg-white rounded-lg shadow p-4 flex flex-col justify-between service-card"><h4 class="font-semibold mb-2" data-translate="serviceRootColoringTitle">Coloration racines</h4><span class="font-bold text-beige-600 text-lg">250 dh</span></div>
+                        <div class="bg-white rounded-lg shadow p-4 flex flex-col justify-between service-card"><h4 class="font-semibold mb-2" data-translate="serviceAmmoniaFreeRootColoringTitle">Coloration racines sans ammoniaque</h4><span class="font-bold text-beige-600 text-lg">300 dh</span></div>
+                        <div class="bg-white rounded-lg shadow p-4 flex flex-col justify-between service-card"><h4 class="font-semibold mb-2" data-translate="serviceRinseColorCorrectionTitle">Rinçage et correction de couleur</h4><span class="font-bold text-beige-600 text-lg">300 dh</span></div>
+                        <div class="bg-white rounded-lg shadow p-4 flex flex-col justify-between service-card"><h4 class="font-semibold mb-2" data-translate="serviceHighlightsTitle">Reflets Highlight</h4><span class="font-bold text-beige-600 text-lg">+750 dh</span></div>
+                        <div class="bg-white rounded-lg shadow p-4 flex flex-col justify-between service-card"><h4 class="font-semibold mb-2" data-translate="serviceOmbreTitle">Ombré</h4><span class="font-bold text-beige-600 text-lg">+1200 dh</span></div>
+                        <div class="bg-white rounded-lg shadow p-4 flex flex-col justify-between service-card"><h4 class="font-semibold mb-2" data-translate="serviceBalayageTitle">Balayage</h4><span class="font-bold text-beige-600 text-lg">+1000 dh</span></div>
+                        <div class="bg-white rounded-lg shadow p-4 flex flex-col justify-between service-card"><h4 class="font-semibold mb-2" data-translate="serviceAirtouchTitle">Airtouch</h4><span class="font-bold text-beige-600 text-lg">+1500 dh</span></div>
                     </div>
                 </div>
                 <!-- SOINS DE CHEVEUX -->
                 <div class="service-category mb-10">
-                    <h3 class="font-serif text-2xl font-bold text-beige-600 mb-4">SOINS DE CHEVEUX</h3>
+                    <h3 class="font-serif text-2xl font-bold text-beige-600 mb-4" data-translate="serviceCategoryHairCare">SOINS DE CHEVEUX</h3>
                     <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-                        <div class="bg-white rounded-lg shadow p-4 flex flex-col justify-between service-card"><h4 class="font-semibold mb-2">Soin ON h’AIR</h4><span class="font-bold text-beige-600 text-lg">250 dh</span></div>
-                        <div class="bg-white rounded-lg shadow p-4 flex flex-col justify-between service-card"><h4 class="font-semibold mb-2">Soin a base de PLEX ou FILLER ou Thérapie</h4><span class="font-bold text-beige-600 text-lg">350 dh</span></div>
-                        <div class="bg-white rounded-lg shadow p-4 flex flex-col justify-between service-card"><h4 class="font-semibold mb-2">Soin COLLAGENE</h4><span class="font-bold text-beige-600 text-lg">+700 dh</span></div>
-                        <div class="bg-white rounded-lg shadow p-4 flex flex-col justify-between service-card"><h4 class="font-semibold mb-2">Soin PROTEINE</h4><span class="font-bold text-beige-600 text-lg">+1000 dh</span></div>
-                        <div class="bg-white rounded-lg shadow p-4 flex flex-col justify-between service-card"><h4 class="font-semibold mb-2">Soin BRUSHING permanent</h4><span class="font-bold text-beige-600 text-lg">750 dh</span></div>
-                        <div class="bg-white rounded-lg shadow p-4 flex flex-col justify-between service-card"><h4 class="font-semibold mb-2">Soin semi permanent CURLY hair</h4><span class="font-bold text-beige-600 text-lg">300 dh</span></div>
-                        <div class="bg-white rounded-lg shadow p-4 flex flex-col justify-between service-card"><h4 class="font-semibold mb-2">Soin permanent CURLY hair</h4><span class="font-bold text-beige-600 text-lg">800 dh</span></div>
+                        <div class="bg-white rounded-lg shadow p-4 flex flex-col justify-between service-card"><h4 class="font-semibold mb-2" data-translate="serviceOnHairCareTitle">Soin ON h’AIR</h4><span class="font-bold text-beige-600 text-lg">250 dh</span></div>
+                        <div class="bg-white rounded-lg shadow p-4 flex flex-col justify-between service-card"><h4 class="font-semibold mb-2" data-translate="servicePlexCareTitle">Soin a base de PLEX</h4><span class="font-bold text-beige-600 text-lg">350 dh</span></div>
+                        <div class="bg-white rounded-lg shadow p-4 flex flex-col justify-between service-card"><h4 class="font-semibold mb-2" data-translate="serviceCollagenCareTitle">Soin COLLAGENE</h4><span class="font-bold text-beige-600 text-lg">+700 dh</span></div>
+                        <div class="bg-white rounded-lg shadow p-4 flex flex-col justify-between service-card"><h4 class="font-semibold mb-2" data-translate="serviceProteinCareTitle">Soin PROTEINE</h4><span class="font-bold text-beige-600 text-lg">+1000 dh</span></div>
+                        <div class="bg-white rounded-lg shadow p-4 flex flex-col justify-between service-card"><h4 class="font-semibold mb-2" data-translate="serviceTherapyCareTitle">Soin BRUSHING permanent</h4><span class="font-bold text-beige-600 text-lg">750 dh</span></div>
+                        <div class="bg-white rounded-lg shadow p-4 flex flex-col justify-between service-card"><h4 class="font-semibold mb-2" data-translate="serviceSemiPermanentCurlyCareTitle">Soin semi permanent CURLY hair</h4><span class="font-bold text-beige-600 text-lg">300 dh</span></div>
+                        <div class="bg-white rounded-lg shadow p-4 flex flex-col justify-between service-card"><h4 class="font-semibold mb-2" data-translate="servicePermanentCurlyCareTitle">Soin permanent CURLY hair</h4><span class="font-bold text-beige-600 text-lg">800 dh</span></div>
                     </div>
                 </div>
                 <!-- MANUCURE -->
                 <div class="service-category mb-10">
-                    <h3 class="font-serif text-2xl font-bold text-beige-600 mb-4">MANUCURE</h3>
+                    <h3 class="font-serif text-2xl font-bold text-beige-600 mb-4" data-translate="serviceCategoryNails">MANUCURE</h3>
                     <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-                        <div class="bg-white rounded-lg shadow p-4 flex flex-col justify-between service-card"><h4 class="font-semibold mb-2">Pose vernis normal</h4><span class="font-bold text-beige-600 text-lg">30 dh</span></div>
-                        <div class="bg-white rounded-lg shadow p-4 flex flex-col justify-between service-card"><h4 class="font-semibold mb-2">Pose vernis permanent</h4><span class="font-bold text-beige-600 text-lg">100 dh</span></div>
-                        <div class="bg-white rounded-lg shadow p-4 flex flex-col justify-between service-card"><h4 class="font-semibold mb-2">Manucure classique</h4><span class="font-bold text-beige-600 text-lg">80 dh</span></div>
-                        <div class="bg-white rounded-lg shadow p-4 flex flex-col justify-between service-card"><h4 class="font-semibold mb-2">Manucure SPA</h4><span class="font-bold text-beige-600 text-lg">150 dh</span></div>
-                        <div class="bg-white rounded-lg shadow p-4 flex flex-col justify-between service-card"><h4 class="font-semibold mb-2">Manucure BIAB</h4><span class="font-bold text-beige-600 text-lg">280 dh</span></div>
-                        <div class="bg-white rounded-lg shadow p-4 flex flex-col justify-between service-card"><h4 class="font-semibold mb-2">Extension de gel (chablon / faux ongle)</h4><span class="font-bold text-beige-600 text-lg">380 dh</span></div>
-                        <div class="bg-white rounded-lg shadow p-4 flex flex-col justify-between service-card"><h4 class="font-semibold mb-2">Remplissage de gel</h4><span class="font-bold text-beige-600 text-lg">180 dh</span></div>
+                        <div class="bg-white rounded-lg shadow p-4 flex flex-col justify-between service-card"><h4 class="font-semibold mb-2" data-translate="serviceNormalPolishTitle">Pose vernis normal</h4><span class="font-bold text-beige-600 text-lg">30 dh</span></div>
+                        <div class="bg-white rounded-lg shadow p-4 flex flex-col justify-between service-card"><h4 class="font-semibold mb-2" data-translate="servicePermanentPolishTitle">Pose vernis permanent</h4><span class="font-bold text-beige-600 text-lg">100 dh</span></div>
+                        <div class="bg-white rounded-lg shadow p-4 flex flex-col justify-between service-card"><h4 class="font-semibold mb-2" data-translate="serviceClassicManicureTitle">Manucure classique</h4><span class="font-bold text-beige-600 text-lg">80 dh</span></div>
+                        <div class="bg-white rounded-lg shadow p-4 flex flex-col justify-between service-card"><h4 class="font-semibold mb-2" data-translate="serviceSpaManicureTitle">Manucure SPA</h4><span class="font-bold text-beige-600 text-lg">150 dh</span></div>
+                        <div class="bg-white rounded-lg shadow p-4 flex flex-col justify-between service-card"><h4 class="font-semibold mb-2" data-translate="serviceBiabManicureTitle">Manucure BIAB</h4><span class="font-bold text-beige-600 text-lg">280 dh</span></div>
+                        <div class="bg-white rounded-lg shadow p-4 flex flex-col justify-between service-card"><h4 class="font-semibold mb-2" data-translate="serviceGelExtensionTitle">Extension de gel (chablon / faux ongle)</h4><span class="font-bold text-beige-600 text-lg">380 dh</span></div>
+                        <div class="bg-white rounded-lg shadow p-4 flex flex-col justify-between service-card"><h4 class="font-semibold mb-2" data-translate="serviceGelRefillTitle">Remplissage de gel</h4><span class="font-bold text-beige-600 text-lg">180 dh</span></div>
                     </div>
                 </div>
                 <!-- PEDICURE -->
                 <div class="service-category mb-10">
-                    <h3 class="font-serif text-2xl font-bold text-beige-600 mb-4">PEDICURE</h3>
+                    <h3 class="font-serif text-2xl font-bold text-beige-600 mb-4" data-translate="serviceCategoryNails">PEDICURE</h3>
                     <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-                        <div class="bg-white rounded-lg shadow p-4 flex flex-col justify-between service-card"><h4 class="font-semibold mb-2">Pose vernis normal</h4><span class="font-bold text-beige-600 text-lg">30 dh</span></div>
-                        <div class="bg-white rounded-lg shadow p-4 flex flex-col justify-between service-card"><h4 class="font-semibold mb-2">Pose vernis permanent</h4><span class="font-bold text-beige-600 text-lg">100 dh</span></div>
-                        <div class="bg-white rounded-lg shadow p-4 flex flex-col justify-between service-card"><h4 class="font-semibold mb-2">Pédicure classique</h4><span class="font-bold text-beige-600 text-lg">100 dh</span></div>
-                        <div class="bg-white rounded-lg shadow p-4 flex flex-col justify-between service-card"><h4 class="font-semibold mb-2">Pédicure SPA</h4><span class="font-bold text-beige-600 text-lg">200 dh</span></div>
-                        <div class="bg-white rounded-lg shadow p-4 flex flex-col justify-between service-card"><h4 class="font-semibold mb-2">Pédicure BIAB</h4><span class="font-bold text-beige-600 text-lg">250 dh</span></div>
-                        <div class="bg-white rounded-lg shadow p-4 flex flex-col justify-between service-card"><h4 class="font-semibold mb-2">Extention de Gel</h4><span class="font-bold text-beige-600 text-lg">400 dh</span></div>
-                        <div class="bg-white rounded-lg shadow p-4 flex flex-col justify-between service-card"><h4 class="font-semibold mb-2">Remplissage de Gel</h4><span class="font-bold text-beige-600 text-lg">300 dh</span></div>
+                        <div class="bg-white rounded-lg shadow p-4 flex flex-col justify-between service-card"><h4 class="font-semibold mb-2" data-translate="serviceNormalPolishTitle">Pose vernis normal</h4><span class="font-bold text-beige-600 text-lg">30 dh</span></div>
+                        <div class="bg-white rounded-lg shadow p-4 flex flex-col justify-between service-card"><h4 class="font-semibold mb-2" data-translate="servicePermanentPolishTitle">Pose vernis permanent</h4><span class="font-bold text-beige-600 text-lg">100 dh</span></div>
+                        <div class="bg-white rounded-lg shadow p-4 flex flex-col justify-between service-card"><h4 class="font-semibold mb-2" data-translate="serviceClassicPedicureTitle">Pédicure classique</h4><span class="font-bold text-beige-600 text-lg">100 dh</span></div>
+                        <div class="bg-white rounded-lg shadow p-4 flex flex-col justify-between service-card"><h4 class="font-semibold mb-2" data-translate="serviceSpaPedicureTitle">Pédicure SPA</h4><span class="font-bold text-beige-600 text-lg">200 dh</span></div>
+                        <div class="bg-white rounded-lg shadow p-4 flex flex-col justify-between service-card"><h4 class="font-semibold mb-2" data-translate="serviceBiabPedicureTitle">Pédicure BIAB</h4><span class="font-bold text-beige-600 text-lg">250 dh</span></div>
+                        <div class="bg-white rounded-lg shadow p-4 flex flex-col justify-between service-card"><h4 class="font-semibold mb-2" data-translate="serviceGelExtensionTitle">Extention de Gel</h4><span class="font-bold text-beige-600 text-lg">400 dh</span></div>
+                        <div class="bg-white rounded-lg shadow p-4 flex flex-col justify-between service-card"><h4 class="font-semibold mb-2" data-translate="serviceGelRefillTitle">Remplissage de Gel</h4><span class="font-bold text-beige-600 text-lg">300 dh</span></div>
                     </div>
                 </div>
                 <!-- EXTRA ONGLES -->
                 <div class="service-category mb-10">
-                    <h3 class="font-serif text-2xl font-bold text-beige-600 mb-4">EXTRA ONGLES</h3>
+                    <h3 class="font-serif text-2xl font-bold text-beige-600 mb-4" data-translate="serviceCategoryNailExtras">EXTRA ONGLES</h3>
                     <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-                        <div class="bg-white rounded-lg shadow p-4 flex flex-col justify-between service-card"><h4 class="font-semibold mb-2">Nail Art</h4><span class="font-bold text-beige-600 text-lg">50 / 100 dh</span></div>
-                        <div class="bg-white rounded-lg shadow p-4 flex flex-col justify-between service-card"><h4 class="font-semibold mb-2">French</h4><span class="font-bold text-beige-600 text-lg">70 dh</span></div>
-                        <div class="bg-white rounded-lg shadow p-4 flex flex-col justify-between service-card"><h4 class="font-semibold mb-2">Babyboomer</h4><span class="font-bold text-beige-600 text-lg">100 dh</span></div>
-                        <div class="bg-white rounded-lg shadow p-4 flex flex-col justify-between service-card"><h4 class="font-semibold mb-2">Faux Ongles avec permanent</h4><span class="font-bold text-beige-600 text-lg">200 dh</span></div>
-                        <div class="bg-white rounded-lg shadow p-4 flex flex-col justify-between service-card"><h4 class="font-semibold mb-2">Chrome</h4><span class="font-bold text-beige-600 text-lg">50 dh</span></div>
-                        <div class="bg-white rounded-lg shadow p-4 flex flex-col justify-between service-card"><h4 class="font-semibold mb-2">Dépose (normal, permanent, gel)</h4><span class="font-bold text-beige-600 text-lg">20dh/ 50dh/ 100 dh</span></div>
+                        <div class="bg-white rounded-lg shadow p-4 flex flex-col justify-between service-card"><h4 class="font-semibold mb-2" data-translate="serviceNailArtTitle">Nail Art</h4><span class="font-bold text-beige-600 text-lg">50 / 100 dh</span></div>
+                        <div class="bg-white rounded-lg shadow p-4 flex flex-col justify-between service-card"><h4 class="font-semibold mb-2" data-translate="serviceFrenchTitle">French</h4><span class="font-bold text-beige-600 text-lg">70 dh</span></div>
+                        <div class="bg-white rounded-lg shadow p-4 flex flex-col justify-between service-card"><h4 class="font-semibold mb-2" data-translate="serviceBabyBoomerTitle">Babyboomer</h4><span class="font-bold text-beige-600 text-lg">100 dh</span></div>
+                        <div class="bg-white rounded-lg shadow p-4 flex flex-col justify-between service-card"><h4 class="font-semibold mb-2" data-translate="serviceFalseNailsPermanentPolishTitle">Faux Ongles avec permanent</h4><span class="font-bold text-beige-600 text-lg">200 dh</span></div>
+                        <div class="bg-white rounded-lg shadow p-4 flex flex-col justify-between service-card"><h4 class="font-semibold mb-2" data-translate="serviceChromeNailsTitle">Chrome</h4><span class="font-bold text-beige-600 text-lg">50 dh</span></div>
+                        <div class="bg-white rounded-lg shadow p-4 flex flex-col justify-between service-card"><h4 class="font-semibold mb-2" data-translate="serviceNormalPolishRemovalTitle">Dépose vernis normal</h4><span class="font-bold text-beige-600 text-lg">20dh</span></div>
+                        <div class="bg-white rounded-lg shadow p-4 flex flex-col justify-between service-card"><h4 class="font-semibold mb-2" data-translate="servicePermanentPolishRemovalTitle">Dépose vernis permanent</h4><span class="font-bold text-beige-600 text-lg">50dh</span></div>
+                        <div class="bg-white rounded-lg shadow p-4 flex flex-col justify-between service-card"><h4 class="font-semibold mb-2" data-translate="serviceGelRemovalTitle">Dépose gel</h4><span class="font-bold text-beige-600 text-lg">100 dh</span></div>
                     </div>
                 </div>
                 <!-- SOIN DE VISAGE -->
                 <div class="service-category mb-10">
-                    <h3 class="font-serif text-2xl font-bold text-beige-600 mb-4">SOIN DE VISAGE</h3>
+                    <h3 class="font-serif text-2xl font-bold text-beige-600 mb-4" data-translate="serviceCategoryFacials">SOIN DE VISAGE</h3>
                     <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-                        <div class="bg-white rounded-lg shadow p-4 flex flex-col justify-between service-card"><h4 class="font-semibold mb-2">Soin purifiant</h4><span class="font-bold text-beige-600 text-lg">300 dh</span></div>
-                        <div class="bg-white rounded-lg shadow p-4 flex flex-col justify-between service-card"><h4 class="font-semibold mb-2">Soin éclat</h4><span class="font-bold text-beige-600 text-lg">500 dh</span></div>
-                        <div class="bg-white rounded-lg shadow p-4 flex flex-col justify-between service-card"><h4 class="font-semibold mb-2">Soin hydratant</h4><span class="font-bold text-beige-600 text-lg">500 dh</span></div>
+                        <div class="bg-white rounded-lg shadow p-4 flex flex-col justify-between service-card"><h4 class="font-semibold mb-2" data-translate="servicePurifyingFacialTitle">Soin purifiant</h4><span class="font-bold text-beige-600 text-lg">300 dh</span></div>
+                        <div class="bg-white rounded-lg shadow p-4 flex flex-col justify-between service-card"><h4 class="font-semibold mb-2" data-translate="serviceRadianceFacialTitle">Soin éclat</h4><span class="font-bold text-beige-600 text-lg">500 dh</span></div>
+                        <div class="bg-white rounded-lg shadow p-4 flex flex-col justify-between service-card"><h4 class="font-semibold mb-2" data-translate="serviceHydratingFacialTitle">Soin hydratant</h4><span class="font-bold text-beige-600 text-lg">500 dh</span></div>
                     </div>
                 </div>
             </div>
@@ -1504,7 +1553,6 @@
         // SPA-like navigation & Smooth Scrolling
         const contentSections = document.querySelectorAll('.content-section');
         const spaNavLinks = document.querySelectorAll('a[data-target]');
-        // const mobileMenuForSPA = document.getElementById('mobile-menu'); // mobileMenu is already defined
         const mainNavbar = document.querySelector('nav');
         const contactDetailsSection = document.getElementById('booking-content');
         const pageFooter = document.querySelector('footer#contact');
@@ -1627,6 +1675,9 @@
         }
 
 
+       
+
+
         const showAllServicesButtonOnServicesPage = document.getElementById('show-all-services-button');
         if (showAllServicesButtonOnServicesPage && searchInput) {
             showAllServicesButtonOnServicesPage.addEventListener('click', function() {
@@ -1737,10 +1788,9 @@
         const imageLightboxModal = document.getElementById('image-lightbox-modal');
         const lightboxImageContent = document.getElementById('lightbox-image-content');
         const imageLightboxCloseBtn = document.getElementById('image-lightbox-close-btn');
-        const galleryImageTriggers = document.querySelectorAll('.gallery-lightbox-trigger');
         const lightboxPrevBtn = document.getElementById('lightbox-prev-btn');
         const lightboxNextBtn = document.getElementById('lightbox-next-btn');
-
+        const galleryImageTriggers = document.querySelectorAll('.gallery-lightbox-trigger');
         let currentImageIndex = 0;
         let allImageSources = [];
 
@@ -1828,10 +1878,8 @@
                 desktopLangOptions.forEach(option => {
                     option.addEventListener('click', function(e) {
                         e.preventDefault();
-                        const selectedLang = this.dataset.lang;
-                        if (typeof setLanguage === 'function') setLanguage(selectedLang);
-                        // desktopCurrentLangText.textContent = this.textContent; // setLanguage will handle this
-                        desktopLangMenu.classList.add('hidden');
+                        console.log('Langue choisie:', this.dataset.lang);
+                        setLanguage(this.dataset.lang);
                     });
                 });
             }
