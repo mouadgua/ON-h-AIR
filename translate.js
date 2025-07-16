@@ -70,7 +70,7 @@ const translations = {
         "contactUsTitle": "Contact Us",
         "contactUsIntro": "Contact us for any questions or to plan your next visit. Our team is here to listen.",
         "contactOpeningHoursTitle": "Opening Hours",
-        "contactOpeningHoursDays": "Monday - Sunday: 11am - 8pm",
+        "contactOpeningHoursDays": "Tuesday - Sunday: 11am - 8pm",
         "contactQuickContactTitle": "Quick Contact",
         "contactCoordinatesTitle": "Our Coordinates",
         "contactFollowUsTitle": "Follow Us",
